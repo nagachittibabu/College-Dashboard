@@ -12,7 +12,7 @@ export default function Header() {
                     <a href="" className="flex items-center mr-10"><i className="fa-sharp fa-regular fa-bell text-xl font-bold"></i></a>
                     <a href="" className="flex items-center mr-10" ><i className="fa-sharp fa-regular fa-envelope text-xl font-bold"></i>
                     </a>
-                    <img src="https://img.freepik.com/premium-photo/memoji-beautiful-girl-woman-white-background-emoji_826801-6868.jpg" alt="girl" className="w-8 h-8 rounded-full mr-1.5 inline-block"></img>
+                    <img src="https://img.freepik.com/premium-photo/memoji-beautiful-girl-woman-white-background-emoji_826801-6864.jpg" alt="girl" className="w-8 h-8 rounded-full mr-1.5 inline-block"></img>
                     <h1 className=" text-sm font-semibold flex items-center mr-4 text-black">Savya Jajimoggala</h1>
                 </div>
             </div>
