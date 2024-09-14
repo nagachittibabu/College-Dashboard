@@ -1,30 +1,31 @@
 
 const Titlecard = ({
    Name,
+   count,
    Description,
-   iconpath="fa-regular fa-user",
+   iconpath,
    Backgroundcolor
 }) => {
    return (
-      <div className={`${Backgroundcolor} w-1/6 border flex  rounded-xl  h-28 shadow-md`}>
+      <div className={`${Backgroundcolor} w-1/4 border flex  rounded-xl h-40 shadow-md mx-4`}>
          <div className="flex justify-center items-center w-1/4 text-center ">
-            <span className="w-12 h-12 rounded-full bg-gray-400 leading-10">
-               <i className={`${iconpath} text-white w-8 h-8 `}></i>
+            <span className="w-16 h-16 rounded-full bg-neutral-500  leading-10">
+               <i className={`${iconpath} text-xl text-white w-12 h-12 mt-5`}></i>
             </span>
          </div>
-         <div className="w-3/4 text-black  pl-2 mt-6">
+         <div className="w-3/4 text-white  pl-2 mt-6">
             <div className="">
-               <div className="text-xs text-left">Total Students{Name}</div>
-               <div className="text-xl text-left pb-1 ">450{Description}</div>
+               <div className="text-lg text-left tracking-wide	">{Name}</div>
+               <div className="text-2xl text-left pb-1 ">{count}</div>
             </div>
             <div className="bg-black w-3/4 h-0.5">
-            <hr />
+               <hr />
             </div>
             <div>
-               <h1 className="text-xs pt-1">45% increase in 28 ...</h1>
-            </div>
+               <h1 className="text-lg pt-1">{Description}</h1>
             </div>
          </div>
+      </div>
    )
 }
-export default Titlecard
+export default Titlecard;  
