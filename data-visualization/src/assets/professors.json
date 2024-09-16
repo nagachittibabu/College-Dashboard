@@ -1,0 +1,18 @@
+[
+  {
+    "key": 0,
+    "name": "Rama Krishna",
+    "qualification": "M.tech",
+    "experience": "2",
+    "department": "Engineering",
+    "role": "",
+    "email": "rama.krishna@gmail.com",
+    "mobileNumber": "9876543210",
+    "alternateMobileNumber": "9876543211",
+    "address": "Kukatpally, Hyderabad",
+    "personal": {
+        "subjects":["sub1","sub2"],
+        "totalLeaves": "20"
+    }
+  }
+]
