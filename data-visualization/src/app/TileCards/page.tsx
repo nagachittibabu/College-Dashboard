@@ -1,31 +1,34 @@
 
 const Titlecard = ({
    Name,
-   count,
+   className,
+   widthClass,
+   numberof,
    Description,
-   iconpath,
-   Backgroundcolor
+   iconpath
 }) => {
    return (
-      <div className={`${Backgroundcolor} w-1/4 border flex  rounded-xl h-40 shadow-md mx-4`}>
+      <div className={`${className} w-1/5 border flex  rounded-xl h-44 shadow-md  pl-2 mainCard`}>
          <div className="flex justify-center items-center w-1/4 text-center ">
-            <span className="w-16 h-16 rounded-full bg-neutral-500  leading-10">
-               <i className={`${iconpath} text-xl text-white w-12 h-12 mt-5`}></i>
+            <span className="w-14 h-14 rounded-full iconbg  leading-10">
+               <i className={`${iconpath} text-xl text-white w-12 h-12 mt-4 `}></i>
             </span>
          </div>
-         <div className="w-3/4 text-white  pl-2 mt-6">
+         <div className="w-3/4 text-white  pl-2 mt-7">
             <div className="">
-               <div className="text-lg text-left tracking-wide	">{Name}</div>
-               <div className="text-2xl text-left pb-1 ">{count}</div>
+               <a href="#">
+                  <div className="text-lg text-left tracking-wide">{Name}</div>
+                  <div className="text-2xl text-left pb-1 ">{numberof}</div>
+               </a>
             </div>
-            <div className="bg-black w-3/4 h-0.5">
-               <hr />
-            </div>
+               <span className="bar">
+                  <span className={`${widthClass} innerbar`}></span>
+               </span>
             <div>
-               <h1 className="text-lg pt-1">{Description}</h1>
+               <h1 className="text-lg pt-1 max-w-max truncate pr-6" title={Description}>{Description}</h1>
             </div>
          </div>
       </div>
    )
-}
-export default Titlecard;  
+}   
+export default  Titlecard; 
