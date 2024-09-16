@@ -1,5 +1,5 @@
 'use client'
-import React from 'react';
+import React, { useState } from 'react';
 import type { BadgeProps, CalendarProps } from 'antd';
 import { Badge, Calendar } from 'antd';
 import type { Dayjs } from "../../../node_modules/@ant-design/";
@@ -26,10 +26,10 @@ const getListData = (value: Dayjs) => {
       listData = [
         { type: 'warning', content: 'This is warning event' },
         { type: 'success', content: 'This is very long usual event' },
-        { type: 'error', content: 'This is error event 1.' },
-        { type: 'error', content: 'This is error event 2.' },
-        { type: 'error', content: 'This is error event 3.' },
-        { type: 'error', content: 'This is error event 4.' },
+        { type: 'error', content: 'This is error event ' },
+        { type: 'error', content: 'This is error event ' },
+        { type: 'error', content: 'This is error event ' },
+        { type: 'error', content: 'This is error event ' },
       ];
       break;
     default:
@@ -45,6 +45,7 @@ const getMonthData = (value: Dayjs) => {
 
 
 const App: React.FC = () => {
+  const[clickedval,setcickedval]=useState("")
 
   const ClickFn = (e:any) => {
     dateContent=""
@@ -53,7 +54,7 @@ const App: React.FC = () => {
         dateContent+=item.content
       )
     })
-    alert(dateContent)
+    setcickedval(dateContent)
   }
 
   const monthCellRender = (value: Dayjs) => {
@@ -69,21 +70,23 @@ const App: React.FC = () => {
   const dateCellRender = (value: Dayjs) => {
     let listData = getListData(value);
     return (
-      <div>
-        <button >
-        <ul onClick={()=>ClickFn(listData)}>
+         <Popconfirm
+    description={clickedval}
+    okText="ok"
+  > <Button onClick={()=>ClickFn(listData)}>
+    <div>
+        <ul  >
           {listData.map((item) => (
             <li key={item.content} >
-              {console.log(item.type)}
               <Badge status={item.type as BadgeProps['status']} text={item.content} />
             </li>
           ))}
         </ul>
-        </button>
       </div>
+        </Button>
+  </Popconfirm>
     );
   };
-console.log(dateContent)
   const cellRender: CalendarProps<Dayjs>['cellRender'] = (current, info) => {
     if (info.type === 'date') return dateCellRender(current);
     if (info.type === 'month') return monthCellRender(current);
@@ -91,14 +94,7 @@ console.log(dateContent)
   };
   return (
     <div className='w-1/2 h-26 border-4 m-4'>
-      <Calendar cellRender={cellRender} className="bg-red-300" />;
-      <Popconfirm
-    description="Are you sure to delete this task?"
-    okText="Yes"
-    cancelText="No"
-  >
-    <Button>HELLO</Button>
-  </Popconfirm>
+      <Calendar cellRender={cellRender}  />;
     </div>
   )
 };
