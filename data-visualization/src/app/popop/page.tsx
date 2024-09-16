@@ -14,7 +14,13 @@ const cancel: PopconfirmProps['onCancel'] = (e) => {
 };
 
 const Popup: React.FC = () => (
-  
+  <Popconfirm
+    description="Are you sure to delete this task?"
+    onConfirm={confirm}
+    onCancel={cancel}
+    okText="Yes"
+    cancelText="No"
+  >
     <Button >Delete</Button>
   </Popconfirm>
 );

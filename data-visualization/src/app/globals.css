@@ -34,20 +34,6 @@ body html{
 .iconbg {
   background-color: rgba(0, 0, 0, 0.2);
 }
-.card1{
-  background: linear-gradient(45deg, #2ed8b6, #a0f6e5);
-}
-.card2{
-  background: linear-gradient(45deg, #ffb64d, #f8ce93);
-}
-.card3{
-  /* background: linear-gradient(45deg, #4099ff, #8cb9ec); */
-  background-color: #ee543a;
-}
-.card4{
-  background: linear-gradient(45deg, #ff5370, #ec9eab);
-}
-
 
 @layer utilities {
   .text-balance {
