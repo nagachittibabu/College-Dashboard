@@ -1,10 +1,21 @@
 'use client'
-import React, { useState } from 'react';
+import React, { createContext, useState } from 'react';
 import type { BadgeProps, CalendarProps } from 'antd';
 import { Badge, Calendar } from 'antd';
-import type { Dayjs } from "../../../node_modules/@ant-design/";
-import { Button, Popconfirm } from '../../../node_modules/antd/es/index';
+import type { Dayjs } from "antd";
+import { Button, Modal, Popconfirm } from '../../../node_modules/antd/es/index';
 var dateContent = ""
+const ReachableContext = createContext<string | null>(null);
+
+const config = {
+  title: 'Use Hook!',
+  content: (
+    <>
+      <ReachableContext.Consumer>{(name) => `Reachable: ${name}!`}</ReachableContext.Consumer>
+    </>
+  ),
+};
+
 const getListData = (value: Dayjs) => {
   let listData: { type: string; content: string }[] = []; // Specify the type of listData
   switch (value.date()) {
@@ -68,8 +79,10 @@ const App: React.FC = () => {
     let listData = getListData(value);
     if (listData) {
       return (
-          <Popconfirm description={clickedval} okText="ok">
-            <Button onClick={() => ClickFn(listData)} className=" w-full h-full border-none">
+        <ReachableContext.Provider value={clickedval}>
+        <Button  onClick={async () => {
+            Modal.info(config);
+          }} className=" w-full h-full border-none">
               <div>
                 <ul  >
                   {listData.map((item) => (
@@ -80,7 +93,7 @@ const App: React.FC = () => {
                 </ul>
               </div>
             </Button>
-          </Popconfirm>
+          </ReachableContext.Provider>
       )
     }
   };
