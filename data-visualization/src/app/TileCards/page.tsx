@@ -15,8 +15,8 @@ const Titlecard = ({
             </span>
          </div>
          <div className="w-3/4 text-white  pl-2 mt-7">
-            <div className="">
-               <a href="#">
+            <div>
+               <a href="./StudentGrid">
                   <div className="text-lg text-left tracking-wide">{Name}</div>
                   <div className="text-2xl text-left pb-1 ">{numberof}</div>
                </a>

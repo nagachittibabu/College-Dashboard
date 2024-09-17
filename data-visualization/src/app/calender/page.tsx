@@ -75,7 +75,7 @@ const App: React.FC = () => {
     okText="ok"
   > <Button onClick={()=>ClickFn(listData)}>
     <div>
-        <ul  >
+        <ul>
           {listData.map((item) => (
             <li key={item.content} >
               <Badge status={item.type as BadgeProps['status']} text={item.content} />
@@ -93,7 +93,7 @@ const App: React.FC = () => {
     return info.originNode;
   };
   return (
-    <div className='w-1/2 h-26 border-4 m-4'>
+    <div className='w-3/4 h-26 border-4 m-4'>
       <Calendar cellRender={cellRender}  />;
     </div>
   )

@@ -1,0 +1,110 @@
+{
+    "attendance_data": [
+      {
+        "date": "2024-09-01",
+        "attended": 4700,
+        "medicalLeave": 100,
+        "personalLeave": 150,
+        "leaveNotApplied": 50
+      },
+      {
+        "date": "2024-09-02",
+        "attended": 4650,
+        "medicalLeave": 120,
+        "personalLeave": 180,
+        "leaveNotApplied": 50
+      },
+      {
+        "date": "2024-09-03",
+        "attended": 4800,
+        "medicalLeave": 90,
+        "personalLeave": 100,
+        "leaveNotApplied": 10
+      },
+      {
+        "date": "2024-09-04",
+        "attended": 4720,
+        "medicalLeave": 110,
+        "personalLeave": 140,
+        "leaveNotApplied": 30
+      },
+      {
+        "date": "2024-09-05",
+        "attended": 4680,
+        "medicalLeave": 130,
+        "personalLeave": 160,
+        "leaveNotApplied": 30
+      },
+      {
+        "date": "2024-09-06",
+        "attended": 4750,
+        "medicalLeave": 100,
+        "personalLeave": 120,
+        "leaveNotApplied": 30
+      },
+      {
+        "date": "2024-09-07",
+        "attended": 4620,
+        "medicalLeave": 140,
+        "personalLeave": 190,
+        "leaveNotApplied": 50
+      },
+      {
+        "date": "2024-09-08",
+        "attended": 4800,
+        "medicalLeave": 90,
+        "personalLeave": 80,
+        "leaveNotApplied": 30
+      },
+      {
+        "date": "2024-09-09",
+        "attended": 4700,
+        "medicalLeave": 100,
+        "personalLeave": 140,
+        "leaveNotApplied": 60
+      },
+      {
+        "date": "2024-09-10",
+        "attended": 4600,
+        "medicalLeave": 150,
+        "personalLeave": 200,
+        "leaveNotApplied": 50
+      },
+      {
+        "date": "2024-09-11",
+        "attended": 4780,
+        "medicalLeave": 80,
+        "personalLeave": 90,
+        "leaveNotApplied": 50
+      },
+      {
+        "date": "2024-09-12",
+        "attended": 4650,
+        "medicalLeave": 130,
+        "personalLeave": 140,
+        "leaveNotApplied": 80
+      },
+      {
+        "date": "2024-09-13",
+        "attended": 4730,
+        "medicalLeave": 110,
+        "personalLeave": 120,
+        "leaveNotApplied": 40
+      },
+      {
+        "date": "2024-09-14",
+        "attended": 4800,
+        "medicalLeave": 90,
+        "personalLeave": 100,
+        "leaveNotApplied": 10
+      },
+      {
+        "date": "2024-09-15",
+        "attended": 4700,
+        "medicalLeave": 110,
+        "personalLeave": 140,
+        "leaveNotApplied": 50
+      }
+    ]
+  }
+  

@@ -1,6 +1,7 @@
 import App from "../calender/page"
 import Header from "../header/page"
 import Popup from "../popop/page"
+import StudentGrid from "../StudentGrid/page"
 import TitleCard from "../TileCards/page"
 
 const DashboardHome=()=>{
