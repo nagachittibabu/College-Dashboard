@@ -1,7 +1,12 @@
-import DashboardHome from "./DashboardApp/page";
+'use client'; // Mark this file as a client-side component
+import React from 'react';
+import DashboardHome from './DashboardApp/page';
 
-export default function Home() {
-  return (
-<DashboardHome></DashboardHome>
-  );
+
+const App: React.FC = () => {
+return(
+  <DashboardHome />
+)
 };
+
+export default App;
