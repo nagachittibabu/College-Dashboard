@@ -1,20 +1,15 @@
 'use client'
-import React, { createContext, useState } from 'react';
+import React, { createContext, useEffect, useState } from 'react';
 import type { BadgeProps, CalendarProps } from 'antd';
 import { Badge, Calendar } from 'antd';
-import type { Dayjs } from "antd";
+import type { Dayjs } from "../../../node_modules/@ant-design/";
 import { Button, Modal, Popconfirm } from '../../../node_modules/antd/es/index';
 var dateContent = ""
 const ReachableContext = createContext<string | null>(null);
 
-const config = {
-  title: 'Use Hook!',
-  content: (
-    <>
-      <ReachableContext.Consumer>{(name) => `Reachable: ${name}!`}</ReachableContext.Consumer>
-    </>
-  ),
-};
+function Config(){
+  
+}
 
 const getListData = (value: Dayjs) => {
   let listData: { type: string; content: string }[] = []; // Specify the type of listData
@@ -46,24 +41,17 @@ const getListData = (value: Dayjs) => {
 };
 
 const getMonthData = (value: Dayjs) => {
-  console.log(value.month)
+  console.log(value)
   if (value.month() === 9) {
     return 1394;
   }
 };
 
 const App: React.FC = () => {
+  const[day,setday]=useState()
   const [clickedval, setcickedval] = useState("")
 
-  const ClickFn = (e: any) => {
-    dateContent = ""
-    e.map(item => {
-      return (
-        dateContent += item.content
-      )
-    })
-    setcickedval(dateContent)
-  }
+
 
   const monthCellRender = (value: Dayjs) => {
     const num = getMonthData(value);
@@ -74,17 +62,17 @@ const App: React.FC = () => {
       </div>
     ) : null;
   };
-
+  let output:any;
+  let contents=""
   const dateCellRender = (value: Dayjs) => {
     let listData = getListData(value);
-    if (listData) {
+   if(listData){
       return (
-        <ReachableContext.Provider value={clickedval}>
-        <Button  onClick={async () => {
-            Modal.info(config);
-          }} className=" w-full h-full border-none">
+        <ReachableContext.Provider value={clickedval}>  
+        <Button  onClick={ () => {Modal.info(output)}} className="border-none bg-transparent w-full h-full ">
+          {output=""}
               <div>
-                <ul  >
+                <ul onClick={()=>{ClickedVal(listData)}}>
                   {listData.map((item) => (
                     <li key={item.content} >
                       <Badge status={item.type as BadgeProps['status']} text={item.content} />
@@ -95,9 +83,16 @@ const App: React.FC = () => {
             </Button>
           </ReachableContext.Provider>
       )
-    }
+      }
   };
-  
+  const ClickedVal=(e:any)=>{
+    contents=""
+    output={}
+    e.map(item=>{
+      contents +=item.content;
+    })
+    output={content:contents}
+  }
   const cellRender: CalendarProps<Dayjs>['cellRender'] = (current, info) => {
     if (info.type === 'date') return dateCellRender(current);
     if (info.type === 'month') return monthCellRender(current);
