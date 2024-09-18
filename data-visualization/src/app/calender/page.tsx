@@ -4,12 +4,7 @@ import type { BadgeProps, CalendarProps } from 'antd';
 import { Badge, Calendar } from 'antd';
 import type { Dayjs } from "../../../node_modules/@ant-design/";
 import { Button, Modal, Popconfirm } from '../../../node_modules/antd/es/index';
-var dateContent = ""
 const ReachableContext = createContext<string | null>(null);
-
-function Config(){
-  
-}
 
 const getListData = (value: Dayjs) => {
   let listData: { type: string; content: string }[] = []; // Specify the type of listData
@@ -20,7 +15,7 @@ const getListData = (value: Dayjs) => {
         { type: 'success', content: 'This is usual event.' },
       ];
       break;
-    case 2:
+    case 20:
       listData = [
         { type: 'warning', content: 'This is warning event.' },
         { type: 'success', content: 'This is usual event.' },
@@ -31,10 +26,28 @@ const getListData = (value: Dayjs) => {
       listData = [
         { type: 'warning', content: 'This is warning event' },
         { type: 'success', content: 'This is very long usual event' },
+        { type: 'error', content: 'This is error event ' },      ];
+      break;
+      case 6:
+      listData = [
+        { type: 'warning', content: 'This is warning event.' },
+        { type: 'success', content: 'This is usual event.' },
+      ];
+      break;
+    case 11:
+      listData = [
+        { type: 'warning', content: 'This is warning event.' },
+        { type: 'success', content: 'This is usual event.' },
+        { type: 'error', content: 'This is error event.' },
+      ];
+      break;
+    case 23:
+      listData = [
+        { type: 'warning', content: 'This is warning event' },
+        { type: 'success', content: 'This is very long usual event' },
         { type: 'error', content: 'This is error event ' },
 
       ];
-      break;
     default:
   }
   return listData || [];
@@ -47,7 +60,7 @@ const getMonthData = (value: Dayjs) => {
   }
 };
 
-const App: React.FC = () => {
+const Calender: React.FC = () => {
   const[day,setday]=useState()
   const [clickedval, setcickedval] = useState("")
 
@@ -106,4 +119,4 @@ const App: React.FC = () => {
 
 };
 
-export default App;
+export default Calender;

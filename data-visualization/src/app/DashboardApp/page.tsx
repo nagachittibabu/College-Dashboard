@@ -10,11 +10,11 @@ const DashboardHome=()=>{
         <div className="">
         <Header />
         </div>
-        <div className="flex">
+        <div className="flex mt-8">
             <div>
                 <Sidenav />
             </div>
-        <div className="flex flex-wrap justify-center pt-16 gap-6 ">
+        <div className="flex flex-wrap justify-center  gap-6 mt-4">
             {TitlecardData.map(item=>{
                 debugger;
                 return(
