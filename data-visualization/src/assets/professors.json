@@ -5,13 +5,118 @@
     "qualification": "M.tech",
     "experience": "2",
     "department": "Engineering",
-    "role": "",
+    "role": "Professor",
     "email": "rama.krishna@gmail.com",
     "mobileNumber": "9876543210",
     "alternateMobileNumber": "9876543211",
     "address": "Kukatpally, Hyderabad",
     "personal": {
+        "key": 0,
         "subjects":["sub1","sub2"],
+        "medicalLeaves": "5",
+        "unappliedLeaves": "0",
+        "leaveBalance": "25",
+        "totalLeaves": "20"
+    }
+  },
+  {
+    "key": 1,
+    "name": "Rama Krishna",
+    "qualification": "M.tech",
+    "experience": "2",
+    "department": "Engineering",
+    "role": "Professor",
+    "email": "rama.krishna@gmail.com",
+    "mobileNumber": "9876543210",
+    "alternateMobileNumber": "9876543211",
+    "address": "Kukatpally, Hyderabad",
+    "personal": {
+        "key": 0,
+        "subjects":["sub1","sub2"],
+        "medicalLeaves": "5",
+        "unappliedLeaves": "0",
+        "leaveBalance": "25",
+        "totalLeaves": "20"
+    }
+  },
+  {
+    "key": 2,
+    "name": "Rama Krishna",
+    "qualification": "M.tech",
+    "experience": "2",
+    "department": "Engineering",
+    "role": "Professor",
+    "email": "rama.krishna@gmail.com",
+    "mobileNumber": "9876543210",
+    "alternateMobileNumber": "9876543211",
+    "address": "Kukatpally, Hyderabad",
+    "personal": {
+        "key": 0,
+        "subjects":["sub1","sub2"],
+        "medicalLeaves": "5",
+        "unappliedLeaves": "0",
+        "leaveBalance": "25",
+        "totalLeaves": "20"
+    }
+  },
+  {
+    "key": 3,
+    "name": "Rama Krishna",
+    "qualification": "M.tech",
+    "experience": "2",
+    "department": "Engineering",
+    "role": "Professor",
+    "email": "rama.krishna@gmail.com",
+    "mobileNumber": "9876543210",
+    "alternateMobileNumber": "9876543211",
+    "address": "Kukatpally, Hyderabad",
+    "personal": {
+        "key": 0,
+        "subjects":["sub1","sub2"],
+        "medicalLeaves": "5",
+        "unappliedLeaves": "0",
+        "leaveBalance": "25",
+        "totalLeaves": "20"
+    }
+  },
+  {
+    "key": 4,
+    "professorId": "P123001",
+    "name": "Rama Krishna",
+    "qualification": "M.tech",
+    "experience": "2",
+    "department": "Engineering",
+    "role": "Professor",
+    "email": "rama.krishna@gmail.com",
+    "mobileNumber": "9876543210",
+    "alternateMobileNumber": "9876543211",
+    "address": "Kukatpally, Hyderabad",
+    "personal": {
+        "key": 0,
+        "subjects":["sub1","sub2"],
+        "medicalLeaves": "5",
+        "unappliedLeaves": "0",
+        "leaveBalance": "25",
+        "totalLeaves": "20"
+    }
+  },
+  {
+    "key": 5,
+    "name": "Rama Krishna",
+    "qualification": "M.tech",
+    "experience": "2",
+    "department": "Engineering",
+    "role": "Professor",
+    "email": "rama.krishna@gmail.com",
+    "mobileNumber": "9876543210",
+    "alternateMobileNumber": "9876543211",
+    "address": "Kukatpally, Hyderabad",
+    "personal": {
+        "key": 0,
+        "subjects":["sub1","sub2"],
+        "medicalLeaves": "5",
+        "unappliedLeaves": "0",
+        "leaveBalance": "25",
         "totalLeaves": "20"
     }
   }
