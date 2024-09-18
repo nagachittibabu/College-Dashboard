@@ -40,3 +40,59 @@ body html{
     text-wrap: balance;
   }
 }
+
+.custom-spinner .ant-spin-dot-item {
+  background-color: #ff6347 !important; /* Change to your desired color, e.g., tomato */
+}
+
+
+.main-container {
+  height: 100vh; /* Full height of the viewport */
+  display: flex;
+  flex-direction: column;
+}
+
+.header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: white; /* Or whatever background suits the design */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add some shadow if needed */
+}
+
+.content-container {
+  display: flex;
+  flex-direction: row; /* Ensure proper row direction */
+  flex-wrap: wrap; /* Allow wrapping if necessary */
+  margin-top: 80px; /* Space for fixed header */
+}
+
+.sidenav-container {
+  position: fixed;
+  top: 55px; /* Space for fixed header */
+  left: 0;
+  height: calc(100vh - 80px); /* Full height minus header */
+  width: 55px; /* Sidenav width */
+  background-color: white; /* Adjust as per your design */
+  overflow-y: auto; /* Allows the sidenav to scroll if content is long */
+  z-index: 1000;
+}
+
+.content-area {
+  display: flex;
+  flex-direction: row; /* Row direction for items */
+  flex-wrap: wrap; /* Allow items to wrap */
+  gap: 20px; /* Space between items */
+}
+
+.calendar-container {
+  margin-left: 260px; /* Space for fixed sidenav */
+  margin-top: 20px; /* Adjust spacing */
+  z-index: 0;
+}
+
+.fontstyle {
+  font-family: 'Poppins' !important;
+}
