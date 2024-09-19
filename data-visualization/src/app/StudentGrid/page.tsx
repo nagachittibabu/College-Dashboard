@@ -77,7 +77,7 @@ useEffect(() => {
   const onChange: TableProps['onChange'] = (pagination, filters, sorter, extra) => {
     // console.log('params', pagination, filters, sorter, extra);
   };
-
+console.log(detail)
   return (
     <>
       <Table

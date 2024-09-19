@@ -1,7 +1,7 @@
 export default function Header() {
     return (
         <div className="">
-            <div className="w-full  flex items-center justify-between pt-1 h-14 shadow-md fixed z-100 bg-white z-100">
+            <div className="w-full  flex items-center justify-between pt-1 h-14 shadow-md fixed  bg-white z-50">
                 <div className="flex gap-8 font-semibold ml-10">
                     <a href="" className="hover:text-blue-600"><h1>Dashboard</h1></a>
                     <a href="" className="hover:text-blue-600"><h1>Leave</h1></a>
