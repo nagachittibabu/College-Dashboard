@@ -5,7 +5,8 @@
         "count":8320,
         "percent":"w-3/4",
         "iconpath":"fa-solid fa-users",
-        "bgcolor":"bg-gradient-to-r from-orange-500 to-yellow-200 "
+        "bgcolor":"bg-gradient-to-r from-orange-500 to-yellow-200 ",
+        "pagenavigation":"./StudentGrid"
     },
     {
         "name":"Academic Achievers",
