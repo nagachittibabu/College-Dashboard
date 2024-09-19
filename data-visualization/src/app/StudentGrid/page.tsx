@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react';
 import type { TableColumnsType, TableProps } from 'antd';
 import { Table } from 'antd';
 //import AttendanceTrend from '../trendline/trendline';
-import hello from "../../../public/students.json"
 
 const StudentGrid: React.FC = () => {
 
@@ -80,7 +79,7 @@ useEffect(() => {
   const onChange: TableProps['onChange'] = (pagination, filters, sorter, extra) => {
     // console.log('params', pagination, filters, sorter, extra);
   };
-  
+
   return (
     <>
       <Table

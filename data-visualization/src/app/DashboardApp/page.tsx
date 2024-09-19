@@ -16,7 +16,6 @@ const DashboardHome=()=>{
             </div>
         <div className="flex flex-wrap justify-center  gap-6 mt-4">
             {TitlecardData.map(item=>{
-                debugger;
                 return(
         <TitleCard Name={item.name}  Description={item.description} numberof={item.count} iconpath={item.iconpath} className={item.bgcolor} widthClass={item.percent}/> 
                 )
