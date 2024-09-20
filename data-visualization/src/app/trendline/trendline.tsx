@@ -65,15 +65,15 @@ const AttendanceTrend: React.FC = () => {
     return (
         <div>
             <h1 style={{fontWeight:'bolder' }}>Students Attendence</h1>
-            <ResponsiveContainer width="100%" height={400}>
+            <ResponsiveContainer width={500} height={400}>
                 <BarChart
                     data={dataForChart}
                     margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
                 >
                     <defs>
                         <linearGradient id="colorAttended" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="5%" stopColor="#106dec" stopOpacity={0.9} />
-                            <stop offset="90%" stopColor="#75c8db" stopOpacity={0.8} />
+                            <stop offset="5%" stopColor="#F97316" stopOpacity={0.9} />
+                            <stop offset="95%" stopColor="#FDE68A" stopOpacity={0.8} />
                         </linearGradient>
                     </defs>
                     <CartesianGrid strokeDasharray="3 3" />

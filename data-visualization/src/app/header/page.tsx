@@ -21,6 +21,27 @@ export default function Header() {
                     </div>
                 </div>
             </div>
-        </div>
-    )
-}
+  
+            {/* Company Name */}
+            <div>
+              <h1 className="text-lg font-bold ml-26 text-purple-950">JNTUK</h1>
+            </div>
+  
+            {/* Notifications and Profile */}
+            <div className="flex items-center gap-6">
+              <a href="" className="flex items-center mr-6">
+                <i className="fa-sharp fa-regular fa-bell text-xl font-bold text-slate-400"></i>
+              </a>
+              <a href="" className="flex items-center mr-6">
+                <i className="fa-sharp fa-regular fa-envelope text-xl font-bold text-slate-400"></i>
+              </a>
+              <img
+                src="https://img.freepik.com/premium-photo/memoji-beautiful-girl-woman-white-background-emoji_826801-6864.jpg"
+                alt="girl"
+                className="w-8 h-8 rounded-full mr-1.5 inline-block"
+              />
+            </div>
+          </div>
+    );
+  }
+  
