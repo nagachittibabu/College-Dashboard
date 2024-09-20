@@ -50,7 +50,8 @@ const CustomTooltip: React.FC<any> = ({ payload, label }) => {
                 borderLeft: '10px solid transparent',
                 borderRight: '10px solid transparent',
                 borderBottom: '10px solid #fff'
-            }}></div>
+            }}>
+            </div>
             <h4 style={{ margin: 0, fontWeight: 'bolder' }}>{`${label} (${weekNumber})`}</h4>
             <p style={{ margin: '5px 0' }}><strong>Total Students:</strong> {totalStudents}</p>
             <p style={{ margin: '5px 0' }}><strong>Attended:</strong> {dataPoint.attended}</p>
@@ -65,7 +66,7 @@ const AttendanceTrend: React.FC = () => {
     return (
         <div>
             {/* <h1 style={{ fontWeight: 'bolder' }}>Students Attendence</h1> */}
-            <ResponsiveContainer width="100%" height={400}>
+            <ResponsiveContainer width={500} height={400}>
                 <BarChart
                     data={dataForChart}
                     margin={{ top: 20, right: 30, left: 20, bottom: 5 }}

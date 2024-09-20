@@ -3,7 +3,6 @@ import Header from "../header/page"
 import TitleCard from "../TileCards/page"
 import TitlecardData from "../jsonfiles/titlename.json"
 import Sidenav from "../sideNav/page"
-import StudentGrid from "../StudentGrid/page"
 import AttendanceTrend from "../trendline/trendline"
 import AttendancePieChart from "../piechart/page"
 import FeeAreaChart from "../areachart/page"
@@ -35,22 +34,23 @@ const DashboardHome = () => {
                                 iconpath={item.iconpath}
                                 className={item.bgcolor}
                                 widthClass={item.percent}
+                                pagenav={item.pagenavigation}
                             />
                         );
                     })}
-                    <div className="grid grid-cols-4 md:grid-cols-3 gap-6">
-                        <div className="bg-white p-4 shadow-md rounded-md flex flex-col">
+                    <div className="w-full flex justify-evenly  gap-12 mt-6">
+                        <div className="w-1/3 bg-white p-4 shadow-md rounded-md flex flex-col">
                             <h3 className="text-lg font-semibold mb-4">Students Attendance Insights</h3>
                             <AttendanceTrend />
                         </div>
-                        <div className="bg-white p-4 shadow-md rounded-md flex flex-col">
+                        <div className="w-1/3 bg-white p-4 shadow-md rounded-md flex flex-col">
                             <h3 className="text-lg font-semibold mb-4">Faculty Attendance Insights</h3>
                             <AttendancePieChart />
                         </div>
-                        <div className="bg-white p-4 shadow-md rounded-md flex flex-col">
+                    </div>
+                    <div className="w-1/3 bg-white p-4 shadow-md rounded-md flex flex-col">
                             <h3 className="text-lg font-semibold mb-4">Financial Health:</h3>
                             <FeeAreaChart />
-                        </div>
                     </div>
                 </div>
 

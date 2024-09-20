@@ -69,7 +69,7 @@ const StudentGrid: React.FC = () => {
   ];
 const [detail,setdetail] = useState([])
 useEffect(() => {
-  fetch('/studentsdata/students.json')
+  fetch('../jsonfiles/titlename.json')
     .then((response) => response.json())
     .then((data) => setdetail(data))
     .catch((error) => console.error('Error fetching the JSON file:',error));
