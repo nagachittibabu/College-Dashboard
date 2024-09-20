@@ -1,9 +1,11 @@
+
 'use client'; // Mark this file as a client-side component
 import React from 'react';
 import { useEffect, useState } from 'react';
 import type { TableColumnsType, TableProps } from 'antd';
 import { Table } from 'antd';
-//import AttendanceTrend from '../trendline/trendline';
+import AttendanceTrend from '../trendline/trendline';
+
 
 const StudentGrid: React.FC = () => {
 
@@ -68,13 +70,14 @@ const StudentGrid: React.FC = () => {
     { title: 'Balance', dataIndex: 'feeBalance', key: 'feeBalance' }
   ];
 
-const [detail,setdetail] = useState([])
-useEffect(() => {
-  fetch('/students.json')
-    .then((response) => response.json())
-    .then((data) => setdetail(data))
-    .catch((error) => console.error('Error fetching the JSON file:',error));
-}, []);
+  const [detail,setdetail] = useState([])
+
+  useEffect(() => {
+    fetch('/students.json')
+      .then((response) => response.json())
+      .then((data) => setdetail(data))
+      .catch((error) => console.error('Error fetching the JSON file:', error));
+  }, []);
 
   const onChange: TableProps['onChange'] = (pagination, filters, sorter, extra) => {
     // console.log('params', pagination, filters, sorter, extra);
@@ -92,11 +95,11 @@ useEffect(() => {
 <div className="flex space-x-4">
       <div className="flex-1 p-4">
         {/* First Component Content */}
-        {/* <AttendanceTrend></AttendanceTrend> */}
+        <AttendanceTrend></AttendanceTrend>
       </div>
       <div className="flex-1 p-4">
         {/* Second Component Content */}
-        {/* <AttendanceTrend></AttendanceTrend> */}
+        <AttendanceTrend></AttendanceTrend>
       </div>
     </div>
 
