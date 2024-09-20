@@ -24,7 +24,7 @@ const DashboardHome = () => {
                 </div>
 
                 {/* Scrollable Content */}
-                <div className="content-area flex flex-wrap justify-center gap-6 mt-4">
+                <div className="content-area flex flex-wrap justify-center gap-12 mt-4">
                     {TitlecardData.map((item) => {
                         return (
                             <TitleCard

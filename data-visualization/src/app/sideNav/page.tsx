@@ -2,7 +2,7 @@ const Sidenav = () => {
     return (
       <nav className="flex pl-2 flex-col items-center gap-10 w-fit p-4 bg-white shadow-lg border h-screen text-2xl fixed text-slate-700">
         {[
-          { icon: "fa-user-graduate", label: "Students" },            
+          { icon: "fa-user-graduate", label: "Students", path:"./StudentGrid"},            
           { icon: "fa-trophy", label: "Academic Achievers" },          
           { icon: "fa-exclamation-triangle", label: "Academic Deficiencies" }, 
           { icon: "fa-chalkboard-teacher", label: "Faculty" },         
@@ -14,7 +14,7 @@ const Sidenav = () => {
           { icon: "fa-sign-out-alt", label: "Logout" }                 
         ].map((item, index) => (
           <div key={index} className="relative group">
-            <a href="#">
+            <a href={item.path}>
               <i className={`fa-solid ${item.icon} cursor-pointer group-hover:text-orange-900`}></i>
             </a>
             {/* Tooltip */}

@@ -6,48 +6,24 @@
         "percent":"w-3/4",
         "iconpath":"fa-solid fa-users",
         "bgcolor":"bg-gradient-to-r from-orange-500 to-yellow-200 ",
-        "pagenavigation":"./StudentGrid"
-    },
-    {
-        "name":"Academic Achievers",
-        "description":" A list of students who have excelled with the highest marks.",
-        "count":75,
-        "percent":"w-1/5",
-        "iconpath":"fa-solid fa-user",
-        "bgcolor":"bg-gradient-to-r from-gray-800 to-slate-400 "
-        
-    },
-    {
-        "name":"Academic Deficiencies",
-        "description":"  A summary of students who did not pass their exams or meet the required academic standards.",
-        "count":1830,
-        "percent":"w-1/2",
-        "iconpath":"fa-solid fa-book",
-        "bgcolor":"bg-gradient-to-r from-green-500 to-emerald-700"
-    },
-    {
-        "name":"Faculty",
-        "description":"The total number of professors and faculty members at the institution.",
-        "count":432,
-        "percent":"w-1/3",
-        "iconpath":"fa-regular fa-user",
-        "bgcolor":"bg-gradient-to-r from-indigo-500 to-purple-400 "
+        "pagenavigation":"../StudentGrid"
     },
     {
         "name":"College Success Rate",
         "description":"  The overall success rate of the college based on student performance and pass rates.",
         "count":"86%",
         "percent":"w-3/4",
-        "iconpath":"fa-regular fa-user",
-        "bgcolor":" bg-gradient-to-r from-fuchsia-500  to-slate-400 "
+        "iconpath":"fa-solid fa-arrow-trend-up",
+        "bgcolor":"bg-gradient-to-r from-green-500 to-emerald-700"
     },
+    
     {
-        "name":"Financial Budget",
-        "description":" A detailed look at the college's annual budget and expenditure plan.",
-        "count":"8,64,00,000",
-        "percent":"w-1/2",
-        "iconpath":"fa-solid fa-money-bill",
-        "bgcolor":"bg-gradient-to-r from-cyan-600 to-cyan-400"
+        "name":"Course Catalog",
+        "description":"A list of all the academic programs and courses offered by the college.",
+        "count":42,
+        "percent":"w-1",
+        "iconpath":"fa-solid fa-book-open-reader",
+        "bgcolor":" bg-gradient-to-r from-gray-800  to-slate-400 "
     },
     {
         "name":"Fee Income",
@@ -58,11 +34,20 @@
         "bgcolor":"bg-gradient-to-r from-pink-600 to-orange-400 "
     },
     {
-        "name":"Course Catalog",
-        "description":"A list of all the academic programs and courses offered by the college.",
-        "count":42,
-        "percent":"w-1",
-        "iconpath":"fa-solid fa-code-branch",
-        "bgcolor":"bg-gradient-to-r from-blue-700 to-sky-400"
+        "name":"Faculty",
+        "description":"The total number of professors and faculty members at the institution.",
+        "count":432,
+        "percent":"w-1/3",
+        "iconpath":"fa-regular fa-user",
+        "bgcolor":"bg-gradient-to-r from-indigo-500 to-purple-400 "
+    },
+   
+    {
+        "name":"Financial Budget",
+        "description":" A detailed look at the college's annual budget and expenditure plan.",
+        "count":"8,64,00,000",
+        "percent":"w-1/2",
+        "iconpath":"fa-solid fa-money-bill",
+        "bgcolor":"bg-gradient-to-r from-cyan-600 to-cyan-400"
     }
 ]
