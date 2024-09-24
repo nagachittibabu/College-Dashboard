@@ -1,6 +1,5 @@
 'use client'; // Mark this file as a client-side component
-import React from 'react';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import type { TableColumnsType, TableProps } from 'antd';
 import { Table } from 'antd';
 
@@ -14,7 +13,16 @@ const ProfessorGrid: React.FC = () => {
                 { title: 'Medical Leaves', dataIndex: 'medicalLeaves', key: 'medicalLeaves' },
                 { title: 'Personal Leaves', dataIndex: 'personalLeaves', key: 'personalLeaves' },
                 { title: 'Un-Paid Leaves', dataIndex: 'unpaidLeaves', key: 'unpaidLeaves' },
-                { title: 'Leave Balance', dataIndex: 'leaveBalance', key: 'leaveBalance' }
+                { title: 'Leave Balance', dataIndex: 'leaveBalance', key: 'leaveBalance' },
+                {title: 'Subjects', dataIndex: 'subjects', key: 'subjects',
+                    render: (subjects) => (
+                        <ul>
+                            {subjects.map((subject: any, index: number) => (
+                                <li key={index}>{subject.subjectName}</li>
+                            ))}
+                        </ul>
+                    )
+                }
             ];
 
             const data: any = [_record.details];

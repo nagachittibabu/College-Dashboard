@@ -14,9 +14,10 @@
     "photo": "/images/photo_0.jpg",
     "details": {
       "key": 0,
-      "subjectDetails": [
+      "subjects": [
         { "subjectName": "Advanced Mathematics" },
         { "subjectName": "Quantum Mechanics" },
+        { "subjectName": "Calculus" },
         { "subjectName": "Introduction to Programming" }
       ],
       "totalLeavesApplied": "4",
@@ -41,7 +42,7 @@
     "photo": "/images/photo_0.jpg",
     "details": {
       "key": 1,
-      "subjectDetails": [
+      "subjects": [
         { "subjectName": "Calculus" },
         { "subjectName": "Electromagnetics" },
         { "subjectName": "Data Structures" }
@@ -68,7 +69,7 @@
     "photo": "/images/photo_0.jpg",
     "details": {
       "key": 2,
-      "subjectDetails": [
+      "subjects": [
         { "subjectName": "Probability and Statistics" },
         { "subjectName": "Modern Physics" },
         { "subjectName": "Software Engineering" }
@@ -95,7 +96,7 @@
     "photo": "/images/photo_0.jpg",
     "details": {
       "key": 3,
-      "subjectDetails": [
+      "subjects": [
         { "subjectName": "Thermodynamics" },
         { "subjectName": "Circuit Theory" },
         { "subjectName": "Database Management Systems" }
@@ -122,7 +123,7 @@
     "photo": "/images/photo_0.jpg",
     "details": {
       "key": 4,
-      "subjectDetails": [
+      "subjects": [
         { "subjectName": "Linear Algebra" },
         { "subjectName": "Control Systems" },
         { "subjectName": "Microprocessors" }
@@ -149,7 +150,7 @@
     "photo": "/images/photo_0.jpg",
     "details": {
       "key": 5,
-      "subjectDetails": [
+      "subjects": [
         { "subjectName": "Numerical Methods" },
         { "subjectName": "Digital Logic Design" },
         { "subjectName": "Operating Systems" }
@@ -176,7 +177,7 @@
     "photo": "/images/photo_0.jpg",
     "details": {
       "key": 6,
-      "subjectDetails": [
+      "subjects": [
         { "subjectName": "Engineering Mechanics" },
         { "subjectName": "Thermodynamics" },
         { "subjectName": "Data Structures" }
@@ -203,7 +204,7 @@
     "photo": "/images/photo_0.jpg",
     "details": {
       "key": 7,
-      "subjectDetails": [
+      "subjects": [
         { "subjectName": "Digital Electronics" },
         { "subjectName": "Control Systems" },
         { "subjectName": "Microprocessors" }
@@ -230,7 +231,7 @@
     "photo": "/images/photo_0.jpg",
     "details": {
       "key": 8,
-      "subjectDetails": [
+      "subjects": [
         { "subjectName": "Embedded Systems" },
         { "subjectName": "Microcontrollers" },
         { "subjectName": "VLSI Design" }
@@ -257,7 +258,7 @@
     "photo": "/images/photo_0.jpg",
     "details": {
       "key": 9,
-      "subjectDetails": [
+      "subjects": [
         { "subjectName": "Software Engineering" },
         { "subjectName": "Database Systems" },
         { "subjectName": "Operating Systems" }
@@ -284,7 +285,7 @@
     "photo": "/images/photo_0.jpg",
     "details": {
       "key": 10,
-      "subjectDetails": [
+      "subjects": [
         { "subjectName": "Computer Networks" },
         { "subjectName": "Web Technologies" },
         { "subjectName": "Computer Architecture" }
@@ -311,7 +312,7 @@
     "photo": "/images/photo_0.jpg",
     "details": {
       "key": 11,
-      "subjectDetails": [
+      "subjects": [
         { "subjectName": "Advanced Algorithms" },
         { "subjectName": "Machine Learning" },
         { "subjectName": "Artificial Intelligence" }
@@ -338,7 +339,7 @@
     "photo": "/images/photo_0.jpg",
     "details": {
       "key": 12,
-      "subjectDetails": [
+      "subjects": [
         { "subjectName": "Digital Signal Processing" },
         { "subjectName": "Communication Systems" },
         { "subjectName": "Wireless Networks" }
@@ -365,7 +366,7 @@
     "photo": "/images/photo_0.jpg",
     "details": {
       "key": 13,
-      "subjectDetails": [
+      "subjects": [
         { "subjectName": "Control Systems" },
         { "subjectName": "Signal Processing" },
         { "subjectName": "System Design" }
@@ -392,7 +393,7 @@
     "photo": "/images/photo_0.jpg",
     "details": {
       "key": 14,
-      "subjectDetails": [
+      "subjects": [
         { "subjectName": "Computer Vision" },
         { "subjectName": "Robotics" },
         { "subjectName": "Machine Learning" }
