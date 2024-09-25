@@ -13,13 +13,13 @@ const AttendancePieChart = () => {
 
   return (
     <div className="flex justify-center items-center mt-6">
-      <PieChart width={400} height={400}>
+      <PieChart width={400} height={239}>
         <Pie
           data={data}
           cx={200} // x coordinate of center of pie chart
-          cy={200} // y coordinate of center of pie chart
+          cy={100} // y coordinate of center of pie chart
           labelLine={false} // disables label lines
-          outerRadius={150} // size of the chart radius
+          outerRadius={100} // size of the chart radius
           fill="#8884d8"
           dataKey="value"
         >

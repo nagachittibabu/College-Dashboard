@@ -1,13 +1,37 @@
- 'use client'; // Mark this file as a client-side component
+'use client'; // Mark this file as a client-side component
 import React from 'react';
 import { useEffect, useState } from 'react';
 import type { TableColumnsType, TableProps } from 'antd';
 import { Table } from 'antd';
-
+import { Select } from 'antd';
+import { Input, Space } from 'antd';
+import { Button } from 'antd';
 
 const StudentGrid: React.FC = () => {
+  const [students, setStudents] = useState([]);
+  const [uniqueYears, setUniqueYears] = useState<string[]>([]);
+  const [uniqueDepartments, setUniqueDepartments] = useState<string[]>([]);
+  const [uniqueBranches, setUniqueBranches] = useState<string[]>([]);
 
+  useEffect(()    => {
+    fetch('/studentsdata/students.json')
+      .then((response) => response.json())
+      .then((data) => {
+        setStudents(data);
+        const years = Array.from(new Set(data.map((student:any) => student.yearOfJoining))).sort();
+        const departments = Array.from(new Set(data.map((student:any) => student.department))).sort();
+        const branches = Array.from(new Set(data.map((student:any) => student.branch))).sort();
+
+        setUniqueYears(years);
+        setUniqueDepartments(departments);
+        setUniqueBranches(branches);
+      })
+      .catch((error) => console.error('Error fetching the JSON file:', error));
+  }, []);
+  const onChange: TableProps['onChange'] = (pagination, filters, sorter, extra) => {
+  };
   const expandedRowRender = (_record: any) => {
+
     if (_record.admissionNumber !== undefined) {
       const columns: TableColumnsType = [
         { title: 'Semester', dataIndex: 'semester', key: 'semester' },
@@ -56,50 +80,56 @@ const StudentGrid: React.FC = () => {
       title: 'Name', dataIndex: 'name', key: 'name', defaultSortOrder: 'descend',
       sorter: (a, b) => a.name - b.name
     },
-    { title: 'Contact', dataIndex: 'mobileNumber', key: 'mobileNumber'},
+    { title: 'Contact', dataIndex: 'mobileNumber', key: 'mobileNumber' },
     { title: 'Parent Name', dataIndex: 'parentName', key: 'parentName' },
     { title: 'Parent Contact', dataIndex: 'parentContact', key: 'parentContact' },
     { title: 'Joined On', dataIndex: 'yearOfJoining', key: 'yearOfJoining' },
     { title: 'Department', dataIndex: 'department', key: 'department' },
     { title: 'Branch', dataIndex: 'branch', key: 'branch' },
     { title: 'Year', dataIndex: 'currentYear', key: 'currentYear' },
-    { title: 'Total Fee', dataIndex: 'totalFee', key: 'totalFee' },
-    { title: 'Fee Paid', dataIndex: 'totalFeePaid', key: 'totalFeePaid' },
-    { title: 'Balance', dataIndex: 'feeBalance', key: 'feeBalance' }
+    { title: 'Semister Percentage', dataIndex: 'currentPercentage', key: 'currentPercentage' },
+    { title: 'Attendence Percentage', dataIndex: 'attendencePercentage', key: 'attendencePercentage' },
   ];
-const [detail,setdetail] = useState([])
-useEffect(() => {
-  fetch('/studentsdata/students.json')
-    .then((response) => response.json())
-    .then((data) => setdetail(data))
-    .catch((error) => console.error('Error fetching the JSON file:',error));
-}, []);
-  const onChange: TableProps['onChange'] = (pagination, filters, sorter, extra) => {
-    // console.log('params', pagination, filters, sorter, extra);
-  };
+
+  const onSearch = (value: string) => console.log(value);
 
   return (
     <>
+      <div className='flex justify-between'>
+        <div className='flex gap-4 ml-16'>
+          <Select
+            showSearch
+            style={{ width: 200 }}
+            placeholder="Search Year"
+            options={uniqueYears.map(year => ({ label: year, value: year }))}
+          />
+          <Select
+            showSearch
+            style={{ width: 200 }}
+            placeholder="Search Department"
+            options={uniqueDepartments.map(department => ({ label: department, value: department }))}
+          />
+          <Select
+            showSearch
+            style={{ width: 200 }}
+            placeholder="Search Branch"
+            options={uniqueBranches.map(branch => ({ label: branch, value: branch }))}
+          />
+        </div>
+        <div className='flex'>
+          <Button className='bg-indigo-50'>Button</Button>
+          <Space direction="vertical">
+            <Input.Search placeholder="input search text" onSearch={onSearch} enterButton />
+          </Space>
+        </div>
+      </div>
       <Table
         columns={columns}
-        onChange={onChange}
         expandable={{ expandedRowRender }}
-        dataSource={detail}
+        dataSource={students}
       />
-
-<div className="flex space-x-4">
-      <div className="flex-1 p-4">
-        {/* First Component Content */}
-        {/* <AttendanceTrend></AttendanceTrend> */}
-      </div>
-      <div className="flex-1 p-4">
-        {/* Second Component Content */}
-        {/* <AttendanceTrend></AttendanceTrend> */}
-      </div>
-    </div>
-
     </>
   );
 };
 
-export default StudentGrid;
+export default StudentGrid;
