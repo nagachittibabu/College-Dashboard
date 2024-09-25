@@ -39,7 +39,7 @@ const DashboardHome = () => {
                         );
                     })}
                 </div>
-                <div className="w-full flex justify-evenly flex-col   mt-6 ml-36">
+                <div className="w-full flex justify-evenly flex-col  mt-6 ml-36">
                     <div className="w-3/4 flex">
                         <div className="w-2/5 h-80 bg-white p-4 shadow-md rounded-md mr-12 mb-6">
                             <h3 className="text-lg font-semibold mb-4 text-center">Students Attendance Insights</h3>
