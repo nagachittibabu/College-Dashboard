@@ -39,16 +39,20 @@ const DashboardHome = () => {
                         );
                     })}
                     <div className="w-full flex justify-evenly  gap-12 mt-6">
-                        <div className="w-1/3 bg-white p-4 shadow-md rounded-md flex flex-col">
+                        <div className="w-1/3 h-80 bg-white p-4 shadow-md rounded-md flex flex-col">
                             <h3 className="text-lg font-semibold mb-4">Students Attendance Insights</h3>
                             <AttendanceTrend />
                         </div>
-                        <div className="w-1/3 bg-white p-4 shadow-md rounded-md flex flex-col">
+                        <div className="w-1/3 h-80 bg-white p-4 shadow-md rounded-md flex flex-col">
                             <h3 className="text-lg font-semibold mb-4">Faculty Attendance Insights</h3>
                             <AttendancePieChart />
                         </div>
                     </div>
-                    <div className="w-1/3 bg-white p-4 shadow-md rounded-md flex flex-col">
+                    <div className="w-1/3 h-80 bg-white p-4 shadow-md rounded-md flex flex-col mr-44">
+                            <h3 className="text-lg font-semibold mb-4">Financial Health:</h3>
+                            <FeeAreaChart />
+                    </div>
+                    <div className="w-1/3 h-80 bg-white p-4 shadow-md rounded-md flex flex-col">
                             <h3 className="text-lg font-semibold mb-4">Financial Health:</h3>
                             <FeeAreaChart />
                     </div>
