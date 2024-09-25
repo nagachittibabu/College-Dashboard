@@ -1,22 +1,35 @@
 "use client"
-import React from 'react';
-import type { PopconfirmProps } from 'antd';
-import { Button, message, Popconfirm } from 'antd';
+import React, { createContext } from 'react';
+import { Button, Modal, Space } from 'antd';
 
-const confirm: PopconfirmProps['onConfirm'] = (e) => {
-  console.log(e);
-  message.success('Click on Yes');
+const ReachableContext = createContext<string | null>(null);
+
+const config = {
+  title: 'Use Hook!',
+  content: (
+    <>
+      <ReachableContext.Consumer>{(name) => `Reachable: ${name}!`}</ReachableContext.Consumer>
+    </>
+  ),
 };
 
-const cancel: PopconfirmProps['onCancel'] = (e) => {
-  console.log(e);
-  message.error('Click on No');
+const App: React.FC = () => {
+  const [modal, contextHolder] = Modal.useModal();
+
+  return (
+    <ReachableContext.Provider value="Light">
+        <Button
+          onClick={async () => {
+            modal.info(config);
+          }}
+        >
+          Info
+        </Button>
+      {/* `contextHolder` should always be placed under the context you want to access */}
+      {contextHolder}
+      {/* Can not access this context since `contextHolder` is not in it */}
+    </ReachableContext.Provider>
+  );
 };
 
-const Popup: React.FC = () => (
-  
-    <Button >Delete</Button>
-  </Popconfirm>
-);
-
-export default Popup;
+export default App;

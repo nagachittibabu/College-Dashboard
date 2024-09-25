@@ -1,4 +1,3 @@
-
 [
     {
       "key": 0,
@@ -12,6 +11,7 @@
       "department": "Engineering",
       "branch": "Computer Science",
       "currentPercentage": 88.5,
+      "attendancePercentage":61,
       "currentYear": "2nd Year",
       "feeBalance": 12000,
       "totalFeePaid": 50000,
@@ -55,6 +55,7 @@
       "department": "Engineering",
       "branch": "Information Technology",
       "currentPercentage": 84.3,
+      "attendancePercentage":40,
       "currentYear": "2nd Year",
       "feeBalance": 10000,
       "totalFeePaid": 48000,
@@ -98,6 +99,8 @@
       "department": "Engineering",
       "branch": "Mechanical",
       "currentPercentage": 90.2,
+      "attendancePercentage":"56%",
+
       "currentYear": "2nd Year",
       "feeBalance": 15000,
       "totalFeePaid": 52000,
@@ -141,6 +144,8 @@
       "department": "Engineering",
       "branch": "Electrical",
       "currentPercentage": 86.4,
+      "attendancePercentage":"64%",
+
       "currentYear": "2nd Year",
       "feeBalance": 11000,
       "totalFeePaid": 49000,
@@ -184,6 +189,8 @@
       "department": "Engineering",
       "branch": "Civil",
       "currentPercentage": 82.1,
+      "attendancePercentage":"74%",
+
       "currentYear": "2nd Year",
       "feeBalance": 13000,
       "totalFeePaid": 47000,
@@ -227,6 +234,8 @@
       "department": "Engineering",
       "branch": "Chemical",
       "currentPercentage": 89.7,
+      "attendancePercentage":"68%",
+
       "currentYear": "2nd Year",
       "feeBalance": 14000,
       "totalFeePaid": 51000,
@@ -270,6 +279,8 @@
       "department": "Engineering",
       "branch": "Electronics",
       "currentPercentage": 87.8,
+      "attendancePercentage":"42%",
+
       "currentYear": "2nd Year",
       "feeBalance": 12500,
       "totalFeePaid": 50000,
@@ -313,6 +324,8 @@
       "department": "Engineering",
       "branch": "Bioinformatics",
       "currentPercentage": 85.9,
+      "attendancePercentage":"80%",
+
       "currentYear": "2nd Year",
       "feeBalance": 11000,
       "totalFeePaid": 48000,
@@ -356,6 +369,8 @@
       "department": "Engineering",
       "branch": "Structural Engineering",
       "currentPercentage": 91.3,
+      "attendancePercentage":"78%",
+
       "currentYear": "2nd Year",
       "feeBalance": 13500,
       "totalFeePaid": 53000,
@@ -399,6 +414,8 @@
       "department": "Engineering",
       "branch": "Environmental Engineering",
       "currentPercentage": 87.5,
+      "attendancePercentage":"91%",
+
       "currentYear": "2nd Year",
       "feeBalance": 11500,
       "totalFeePaid": 49000,

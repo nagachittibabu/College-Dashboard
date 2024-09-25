@@ -1,28 +1,69 @@
-import App from "../calender/page"
+// import Calender from "../calender/page"
 import Header from "../header/page"
 import Popup from "../popop/page"
 import StudentGrid from "../StudentGrid/page"
-import TitleCard from "../TileCards/page"
+// import TitleCard from "../TileCards/page"
+import TitlecardData from "../jsonfiles/titlename.json"
+import Sidenav from "../sideNav/page"
+import AttendanceTrend from "../trendline/trendline"
+import AttendancePieChart from "../piechart/page"
+import FeeAreaChart from "../areachart/page"
+import Titlecard from "../TileCards/page"
+import Calender from "../calender/page"
 
-const DashboardHome=()=>{
-   return(
-    <div>
-        <Header />
-        <div className="flex flex-wrap justify-center pt-16 gap-4 ">
-        <TitleCard Name={"Total Students"}  Description="45% increase in students from last 28 days" numberof={450} iconpath="fa-regular fa-user" className="bg-gradient-to-r from-orange-500 to-yellow-300 " widthClass="w-1/2"/>
-        <TitleCard Name={"Total Students"} Description="45% increase in 28 ..." numberof={450} iconpath="fa-solid fa-book" className="bg-gradient-to-r from-gray-600 to-slate-400 " widthClass="w-1/5"/>
-        <TitleCard Name={"Total Students"} Description="45% increase in 28 ..." numberof={450} iconpath="fa-solid fa-book" className="bg-gradient-to-r from-green-500 to-emerald-700 " widthClass="w-1/5"/>
-        <TitleCard Name={"Total Students"}  Description="45% increase in students from last 28 days" numberof={450} iconpath="fa-regular fa-user" className="bg-gradient-to-r from-indigo-500 to-purple-400 " widthClass="w-1/4"/>
-        <TitleCard Name={"Total Students"}  Description="45% increase in 28 ..." numberof={450} iconpath="fa-solid fa-dollar-sign" className=" bg-gradient-to-r from-fuchsia-500  to-slate-400 " widthClass="w-3/4"/>
-        <TitleCard Name={"Total Students"}  Description="45% increase in 28 ..." numberof={450} iconpath="fa-regular fa-user" className="bg-gradient-to-r from-cyan-600 to-cyan-400" widthClass="w-1/4"/>
-        <TitleCard Name={"Total Students"}  Description="45% increase in students from last 28 days" numberof={450} iconpath="fa-regular fa-user" className="bg-gradient-to-r from-pink-600 to-orange-400 " widthClass="w-1/2"/>
-        <TitleCard Name={"Total Students"}  Description="45% increase in 28 ..." numberof={450} iconpath="fa-solid fa-dollar-sign" className="bg-gradient-to-r from-blue-700 to-sky-400" widthClass="w-3/4"/>
-        
+const DashboardHome = () => {
+    return (
+
+        <div className="main-container">
+            {/* Header */}
+            <div className="header-container">
+                <Header />
+            </div>
+
+            {/* Sidenav and Main Content */}
+            <div className="flex mt-16 content-container">
+                {/* Sidenav */}
+                <div className="sidenav-container">
+                    <Sidenav />
+                </div>
+
+                {/* Scrollable Content */}
+                <div className="content-area flex flex-wrap justify-center gap-12 mt-4">
+                    {TitlecardData.map((item) => {
+                        return (
+                            <Titlecard
+                                Name={item.name}
+                                Description={item.description}
+                                numberof={item.count}
+                                iconpath={item.iconpath}
+                                className={item.bgcolor}
+                                widthClass={item.percent}
+                                pagenav={item.pagenavigation}
+                            />
+                        );
+                    })}
+                    <div className="w-full flex justify-evenly  gap-12 mt-6">
+                        <div className="w-1/3 bg-white p-4 shadow-md rounded-md flex flex-col">
+                            <h3 className="text-lg font-semibold mb-4">Students Attendance Insights</h3>
+                            <AttendanceTrend />
+                        </div>
+                        <div className="w-1/3 bg-white p-4 shadow-md rounded-md flex flex-col">
+                            <h3 className="text-lg font-semibold mb-4">Faculty Attendance Insights</h3>
+                            <AttendancePieChart />
+                        </div>
+                    </div>
+                    <div className="w-1/3 bg-white p-4 shadow-md rounded-md flex flex-col">
+                            <h3 className="text-lg font-semibold mb-4">Financial Health:</h3>
+                            <FeeAreaChart />
+                    </div>
+                </div>
+
+                {/* Calendar */}
+                <div className="calendar-container">
+                    <Calender />
+                </div>
+            </div>
         </div>
-        <div className="flex">
-        <App />
-        </div>
-    </div>
-   )
+    )
 }
 export default DashboardHome
