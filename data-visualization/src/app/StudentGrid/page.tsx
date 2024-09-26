@@ -55,6 +55,7 @@ const StudentGrid: React.FC = () => {
         <>
           <Table
             columns={columns}
+            onChange={onChange}
             expandable={{ expandedRowRender }}
             dataSource={data}
             pagination={false}

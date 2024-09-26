@@ -14,7 +14,7 @@
       "currentPercentage": 88.5,
       "currentYear": "2nd Year",
       "feeBalance": 12000,
-      "totalFeePaid": 50000,
+      "attendencePercentage": 80,
       "totalFee": 62000,
       "semesterDetails": {
         "semester1": {
@@ -57,7 +57,7 @@
       "currentPercentage": 84.3,
       "currentYear": "2nd Year",
       "feeBalance": 10000,
-      "totalFeePaid": 48000,
+      "attendencePercentage": 87,
       "totalFee": 58000,
       "semesterDetails": {
         "semester1": {
@@ -100,7 +100,7 @@
       "currentPercentage": 90.2,
       "currentYear": "2nd Year",
       "feeBalance": 15000,
-      "totalFeePaid": 52000,
+      "attendencePercentage": 95,
       "totalFee": 67000,
       "semesterDetails": {
         "semester1": {
@@ -143,7 +143,7 @@
       "currentPercentage": 86.4,
       "currentYear": "2nd Year",
       "feeBalance": 11000,
-      "totalFeePaid": 49000,
+      "attendencePercentage": 79.5,
       "totalFee": 60000,
       "semesterDetails": {
         "semester1": {
@@ -186,7 +186,7 @@
       "currentPercentage": 82.1,
       "currentYear": "2nd Year",
       "feeBalance": 13000,
-      "totalFeePaid": 47000,
+      "attendencePercentage": 92.5,
       "totalFee": 60000,
       "semesterDetails": {
         "semester1": {
@@ -229,7 +229,7 @@
       "currentPercentage": 89.7,
       "currentYear": "2nd Year",
       "feeBalance": 14000,
-      "totalFeePaid": 51000,
+      "attendencePercentage": 88.2,
       "totalFee": 65000,
       "semesterDetails": {
         "semester1": {
@@ -272,7 +272,7 @@
       "currentPercentage": 87.8,
       "currentYear": "2nd Year",
       "feeBalance": 12500,
-      "totalFeePaid": 50000,
+      "attendencePercentage": 81.9,
       "totalFee": 62500,
       "semesterDetails": {
         "semester1": {
@@ -315,7 +315,7 @@
       "currentPercentage": 85.9,
       "currentYear": "2nd Year",
       "feeBalance": 11000,
-      "totalFeePaid": 48000,
+      "attendencePercentage": 90.6,
       "totalFee": 59000,
       "semesterDetails": {
         "semester1": {
@@ -358,7 +358,7 @@
       "currentPercentage": 91.3,
       "currentYear": "2nd Year",
       "feeBalance": 13500,
-      "totalFeePaid": 53000,
+      "attendencePercentage": 79.2,
       "totalFee": 66500,
       "semesterDetails": {
         "semester1": {
@@ -401,7 +401,7 @@
       "currentPercentage": 87.5,
       "currentYear": "2nd Year",
       "feeBalance": 11500,
-      "totalFeePaid": 49000,
+      "attendencePercentage": 95.3,
       "totalFee": 60500,
       "semesterDetails": {
         "semester1": {

@@ -20,6 +20,7 @@ const dataForChart = data.map(d => ({
     leaveNotApplied: (d.leaveNotApplied / totalStudents) * 100
 }));
 
+
 const CustomTooltip: React.FC<any> = ({ payload, label }) => {
     if (!payload || payload.length === 0) return null;
 
@@ -50,9 +51,8 @@ const CustomTooltip: React.FC<any> = ({ payload, label }) => {
                 borderLeft: '10px solid transparent',
                 borderRight: '10px solid transparent',
                 borderBottom: '10px solid #fff'
-            }}>
-            </div>
-            <h4 style={{ margin: 0, fontWeight: 'bolder' }}>{`${label} (${weekNumber})`}</h4>
+            }}></div>
+                  <h4 style={{ margin: 0, fontWeight:'bolder' }}>{`${label} (${weekNumber})`}</h4>
             <p style={{ margin: '5px 0' }}><strong>Total Students:</strong> {totalStudents}</p>
             <p style={{ margin: '5px 0' }}><strong>Attended:</strong> {dataPoint.attended}</p>
             <p style={{ margin: '5px 0' }}><strong>Medical Leave:</strong> {dataPoint.medicalLeave}</p>
@@ -66,7 +66,7 @@ const AttendanceTrend: React.FC = () => {
     return (
         <div>
             {/* <h1 style={{ fontWeight: 'bolder' }}>Students Attendence</h1> */}
-            <ResponsiveContainer width={500} height={400}>
+            <ResponsiveContainer width={350} height={250}>
                 <BarChart
                     data={dataForChart}
                     margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
@@ -77,8 +77,8 @@ const AttendanceTrend: React.FC = () => {
                             <stop offset="95%" stopColor="#FDE68A" stopOpacity={0.8} />
                         </linearGradient>
                     </defs>
-                    <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="date" />
+                    <CartesianGrid />
+                    <XAxis dataKey="date"/>
                     <YAxis tickFormatter={(tick) => `${tick.toFixed(0)}%`} />
                     <Tooltip content={<CustomTooltip />} />
                     <Bar dataKey="attended" fill="url(#colorAttended)" />
