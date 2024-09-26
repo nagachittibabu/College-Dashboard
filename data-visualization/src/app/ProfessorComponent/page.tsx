@@ -1,10 +1,13 @@
 'use client'; // Mark this file as a client-side component
 import React, { useEffect, useState } from 'react';
 import type { TableColumnsType, TableProps } from 'antd';
-import { Table } from 'antd';
+import { Button, Select, Space, Table, Input } from 'antd';
+import Header from '../header/page';
+import Sidenav from '../sideNav/page';
 
 
 const ProfessorGrid: React.FC = () => {
+    const [uniqueDepartments, setUniqueDepartments] = useState<string[]>([]);
 
     const expandedRowRender = (_record: any) => {
         if (_record.professorId !== undefined) {
@@ -40,7 +43,7 @@ const ProfessorGrid: React.FC = () => {
     };
 
     const columns: TableColumnsType = [
-        { title: 'Photo', dataIndex: 'photo', key: 'photo', render: (text: string) => <img src={text} alt="Professor" className="w-80 h-14 rounded-full" /> },
+        { title: 'Photo', dataIndex: 'photo', key: 'photo', render: (text: string) => <img src={text} alt="Professor" className="rounded-full" /> },
         {
             title: 'ID', dataIndex: 'professorId', key: 'professorId', defaultSortOrder: 'descend',
             sorter: (a, b) => a.professorId - b.professorId
@@ -55,7 +58,6 @@ const ProfessorGrid: React.FC = () => {
         { title: 'Role', dataIndex: 'role', key: 'role' },
         { title: 'Email', dataIndex: 'email', key: 'email' },
         { title: 'Phone Number', dataIndex: 'mobileNumber', key: 'mobileNumber'},
-        { title: 'Alterntative Number', dataIndex: 'alternateMobileNumber', key: 'alternateMobileNumber'},
         { title: 'Address', dataIndex: 'address', key: 'address'}
     ];
 
@@ -64,7 +66,11 @@ const ProfessorGrid: React.FC = () => {
     useEffect(() => {
         fetch('/professors.json')
         .then((response) => response.json())
-        .then((data) => setDetail(data))
+        .then((data) => {
+            setDetail(data);
+            const departments = Array.from(new Set(data.map(professor => professor.department))).sort();
+            setUniqueDepartments(departments);
+        })
         .catch((error) => console.error('Error fetching the JSON file:', error));
     }, []);
 
@@ -72,14 +78,41 @@ const ProfessorGrid: React.FC = () => {
         // console.log('params', pagination, filters, sorter, extra);
     };
 
+    const onSearch = (value: string) => console.log(value);
+
     return (
         <>
-        <Table
-            columns={columns}
-            onChange={onChange}
-            expandable={{ expandedRowRender }}
-            dataSource={detail}
-        />
+        <div>
+            <Header />
+        </div>
+        <div className='sidenav-container'>
+            <Sidenav />
+        </div>
+            <div className='flex justify-between p-5 ml-10'>
+                <div>
+                    <Select
+                        showSearch
+                        style={{ width: 200 }}
+                        placeholder="Search Department"
+                        options={uniqueDepartments.map(department => ({ label: department, value: department }))}
+                    />
+                </div>
+                <div className='flex'>
+                    <Space direction="vertical">
+                        <Input.Search placeholder="Search" onSearch={onSearch} enterButton />
+                    </Space>
+                    <Button className='bg-indigo-50 ml-10'><i className="fa-solid fa-file-export"></i></Button>
+                </div>
+            </div>
+            <div className='shadow-md overflow-hidden ml-16 mr-2'>
+                <Table
+                    columns={columns}
+                    onChange={onChange}
+                    expandable={{ expandedRowRender }}
+                    dataSource={detail}
+                />
+            </div>
+        
 
         <div className="flex space-x-4">
             <div className="flex-1 p-4">
