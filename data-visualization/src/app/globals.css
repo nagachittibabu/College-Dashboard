@@ -34,7 +34,13 @@ body html{
 .iconbg {
   background-color: rgba(0, 0, 0, 0.2);
 }
+.titlecards{
+  width: 26rem;
+}
 
+.chartswidth{
+  width: 37.333333%;
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;

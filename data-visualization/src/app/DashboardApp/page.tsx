@@ -39,29 +39,34 @@ const DashboardHome = () => {
                         );
                     })}
                 </div>
-                <div className="w-full flex justify-evenly flex-col  mt-6 ml-36">
-                    <div className="w-3/4 flex">
-                        <div className="w-2/5 h-80 bg-white p-4 shadow-md rounded-md mr-12 mb-6">
-                            <h3 className="text-lg font-semibold mb-4 text-center">Students Attendance Insights</h3>
-                            <AttendanceTrend />
+                <div className="w-full flex">
+                    <div className="w-3/4 mt-12">
+                        <div className="w-full flex ml-28">
+                            <div className="chartswidth  h-80 bg-white p-4 shadow-md rounded-md mr-12 mb-6">
+                                <h3 className="text-lg font-semibold mb-4 text-center">Students Attendance Insights</h3>
+                                <AttendanceTrend />
+                            </div>
+                            <div className="chartswidth  h-80 bg-white p-4 shadow-md rounded-md flex flex-col">
+                                <h3 className="text-lg font-semibold mb-4 text-center">Faculty Attendance Insights</h3>
+                                <AttendancePieChart />
+                            </div>
                         </div>
-                        <div className="w-2/5 h-80 bg-white p-4 shadow-md rounded-md flex flex-col">
-                            <h3 className="text-lg font-semibold mb-4 text-center">Faculty Attendance Insights</h3>
-                            <AttendancePieChart />
+                        <div className="w-full flex ml-28 mt-10 ">
+                            <div className="chartswidth  h-80 bg-white p-4 shadow-md rounded-md flex flex-col mr-12 mb-6">
+                                <h3 className="text-lg font-semibold mb-4 text-center">Financial Health:</h3>
+                                <FeeAreaChart />
+                            </div>
+                            <div className="chartswidth  h-80 bg-white p-4 shadow-md rounded-md flex flex-col">
+                                <h3 className="text-lg font-semibold mb-4 text-center">Financial Health:</h3>
+                                <FeeAreaChart />
+                            </div>
                         </div>
                     </div>
-                    <div className="w-3/4 flex">
-                        <div className="w-2/5 h-80 bg-white p-4 shadow-md rounded-md flex flex-col mr-12 mb-6">
-                            <h3 className="text-lg font-semibold mb-4 text-center">Financial Health:</h3>
-                            <FeeAreaChart />
-                        </div>
-                        <div className="w-2/5 h-80 bg-white p-4 shadow-md rounded-md flex flex-col">
-                            <h3 className="text-lg font-semibold mb-4 text-center">Financial Health:</h3>
-                            <FeeAreaChart />
-                        </div>
+                    <div className="w-1/4 shadow-md border h-full mt-12 mr-24">
+                        <h1 className="text-center font-bold text-2xl">Events</h1>
+
                     </div>
                 </div>
-
                 {/* Calendar */}
                 <div className="calendar-container">
                     <Calender />
