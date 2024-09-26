@@ -1,4 +1,3 @@
-
 [
     {
       "key": 0,
@@ -12,9 +11,10 @@
       "department": "Engineering",
       "branch": "Computer Science",
       "currentPercentage": 88.5,
+      "attendancePercentage":61,
       "currentYear": "2nd Year",
       "feeBalance": 12000,
-      "attendencePercentage": 80,
+      "totalFeePaid": 50000,
       "totalFee": 62000,
       "semesterDetails": {
         "semester1": {
@@ -55,9 +55,10 @@
       "department": "Engineering",
       "branch": "Information Technology",
       "currentPercentage": 84.3,
+      "attendancePercentage":40,
       "currentYear": "2nd Year",
       "feeBalance": 10000,
-      "attendencePercentage": 87,
+      "totalFeePaid": 48000,
       "totalFee": 58000,
       "semesterDetails": {
         "semester1": {
@@ -98,9 +99,11 @@
       "department": "Engineering",
       "branch": "Mechanical",
       "currentPercentage": 90.2,
+      "attendancePercentage":"56%",
+
       "currentYear": "2nd Year",
       "feeBalance": 15000,
-      "attendencePercentage": 95,
+      "totalFeePaid": 52000,
       "totalFee": 67000,
       "semesterDetails": {
         "semester1": {
@@ -141,9 +144,11 @@
       "department": "Engineering",
       "branch": "Electrical",
       "currentPercentage": 86.4,
+      "attendancePercentage":"64%",
+
       "currentYear": "2nd Year",
       "feeBalance": 11000,
-      "attendencePercentage": 79.5,
+      "totalFeePaid": 49000,
       "totalFee": 60000,
       "semesterDetails": {
         "semester1": {
@@ -184,9 +189,11 @@
       "department": "Engineering",
       "branch": "Civil",
       "currentPercentage": 82.1,
+      "attendancePercentage":"74%",
+
       "currentYear": "2nd Year",
       "feeBalance": 13000,
-      "attendencePercentage": 92.5,
+      "totalFeePaid": 47000,
       "totalFee": 60000,
       "semesterDetails": {
         "semester1": {
@@ -227,9 +234,11 @@
       "department": "Engineering",
       "branch": "Chemical",
       "currentPercentage": 89.7,
+      "attendancePercentage":"68%",
+
       "currentYear": "2nd Year",
       "feeBalance": 14000,
-      "attendencePercentage": 88.2,
+      "totalFeePaid": 51000,
       "totalFee": 65000,
       "semesterDetails": {
         "semester1": {
@@ -270,9 +279,11 @@
       "department": "Engineering",
       "branch": "Electronics",
       "currentPercentage": 87.8,
+      "attendancePercentage":"42%",
+
       "currentYear": "2nd Year",
       "feeBalance": 12500,
-      "attendencePercentage": 81.9,
+      "totalFeePaid": 50000,
       "totalFee": 62500,
       "semesterDetails": {
         "semester1": {
@@ -313,9 +324,11 @@
       "department": "Engineering",
       "branch": "Bioinformatics",
       "currentPercentage": 85.9,
+      "attendancePercentage":"80%",
+
       "currentYear": "2nd Year",
       "feeBalance": 11000,
-      "attendencePercentage": 90.6,
+      "totalFeePaid": 48000,
       "totalFee": 59000,
       "semesterDetails": {
         "semester1": {
@@ -356,9 +369,11 @@
       "department": "Engineering",
       "branch": "Structural Engineering",
       "currentPercentage": 91.3,
+      "attendancePercentage":"78%",
+
       "currentYear": "2nd Year",
       "feeBalance": 13500,
-      "attendencePercentage": 79.2,
+      "totalFeePaid": 53000,
       "totalFee": 66500,
       "semesterDetails": {
         "semester1": {
@@ -399,9 +414,11 @@
       "department": "Engineering",
       "branch": "Environmental Engineering",
       "currentPercentage": 87.5,
+      "attendancePercentage":"91%",
+
       "currentYear": "2nd Year",
       "feeBalance": 11500,
-      "attendencePercentage": 95.3,
+      "totalFeePaid": 49000,
       "totalFee": 60500,
       "semesterDetails": {
         "semester1": {

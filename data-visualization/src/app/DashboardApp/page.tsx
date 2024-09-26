@@ -1,11 +1,15 @@
-import Calender from "../calender/page"
+// import Calender from "../calender/page"
 import Header from "../header/page"
-import TitleCard from "../TileCards/page"
+import Popup from "../popop/page"
+import StudentGrid from "../StudentGrid/page"
+// import TitleCard from "../TileCards/page"
 import TitlecardData from "../jsonfiles/titlename.json"
 import Sidenav from "../sideNav/page"
 import AttendanceTrend from "../trendline/trendline"
 import AttendancePieChart from "../piechart/page"
 import FeeAreaChart from "../areachart/page"
+import Titlecard from "../TileCards/page"
+import Calender from "../calender/page"
 
 const DashboardHome = () => {
     return (
@@ -27,7 +31,7 @@ const DashboardHome = () => {
                 <div className="content-area flex flex-wrap justify-center gap-12 mt-4">
                     {TitlecardData.map((item) => {
                         return (
-                            <TitleCard
+                            <Titlecard
                                 Name={item.name}
                                 Description={item.description}
                                 numberof={item.count}
