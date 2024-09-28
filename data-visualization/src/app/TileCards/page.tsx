@@ -8,7 +8,7 @@ const Titlecard = ({
    pagenav
 }) => {
    return (
-      <div className={`${className} w-96 border flex justify-center rounded-xl h-44 shadow-md ml-2 px-2 m-2`}>
+      <div className={`${className} w-1/4 border flex justify-center rounded-xl h-44 shadow-md ml-2 px-2 m-2`}>
          <div className="flex justify-center items-center w-1/4 text-center ">
             <span className="w-14 h-14 rounded-full iconbg  leading-10">
                <i className={`${iconpath} text-xl text-white w-12 h-12 mt-4 `}></i>
