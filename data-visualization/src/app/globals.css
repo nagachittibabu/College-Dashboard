@@ -14,8 +14,8 @@
   }
 }
 body html{
-  font-family:  "Helvetica", "Arial", sans-serif;;
-}
+  font-family: "Poppins", sans-serif;
+  }
 .bar{
   display: block;
   background-color: grey;
@@ -101,4 +101,8 @@ body html{
 
 .fontstyle {
   font-family: 'Poppins' !important;
+}
+
+.bgcolor{
+  background:#00000009 ;
 }

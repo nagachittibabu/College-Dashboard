@@ -9,6 +9,12 @@ const data = [
     { date: '2024-08-03', attended: 4600, medicalLeave: 70, personalLeave: 40, leaveNotApplied: 290, totalStudents: 5000 },
     { date: '2024-08-04', attended: 1850, medicalLeave: 1045, personalLeave: 1020, leaveNotApplied: 1085, totalStudents: 5000 },
     { date: '2024-08-05', attended: 4750, medicalLeave: 55, personalLeave: 35, leaveNotApplied: 160, totalStudents: 5000 },
+    { date: '2024-08-05', attended: 4750, medicalLeave: 55, personalLeave: 35, leaveNotApplied: 160, totalStudents: 5000 },
+    { date: '2024-08-05', attended: 4750, medicalLeave: 55, personalLeave: 35, leaveNotApplied: 160, totalStudents: 5000 },
+    { date: '2024-08-05', attended: 4750, medicalLeave: 55, personalLeave: 35, leaveNotApplied: 160, totalStudents: 5000 },
+    { date: '2024-08-05', attended: 4750, medicalLeave: 55, personalLeave: 35, leaveNotApplied: 160, totalStudents: 5000 },
+    { date: '2024-08-05', attended: 4750, medicalLeave: 55, personalLeave: 35, leaveNotApplied: 160, totalStudents: 5000 },
+    { date: '2024-08-05', attended: 4750, medicalLeave: 55, personalLeave: 35, leaveNotApplied: 160, totalStudents: 5000 },
     { date: '2024-08-06', attended: 4900, medicalLeave: 40, personalLeave: 30, leaveNotApplied: 130, totalStudents: 5000 }
 ]
 
@@ -56,7 +62,7 @@ const CustomTooltip: React.FC<any> = ({ payload, label }) => {
             <h4 style={{ margin: 0, fontWeight: 'bolder' }}>{`${label} (${weekNumber})`}</h4>
             <p style={{ margin: '5px 0' }}><strong>Total Students:</strong> {totalStudents}</p>
             <p style={{ margin: '5px 0' }}><strong>Attended:</strong> {dataPoint.attended}</p>
-            <p style={{ margin: '5px 0' }}><strong>Medical Leave:</strong> {dataPoint.medicalLeave}</p>
+            <p style={{ margin: '5px 0' } }><strong>Medical Leave:</strong> {dataPoint.medicalLeave}</p>
             <p style={{ margin: '5px 0' }}><strong>Personal Leave:</strong> {dataPoint.personalLeave}</p>
             <p style={{ margin: '5px 0' }}><strong>Leave Not Applied:</strong><span style={{ color: 'red' }}>{dataPoint.leaveNotApplied}</span></p>
         </div>
@@ -67,10 +73,10 @@ const AttendanceTrend: React.FC = () => {
     return (
         <div>
             {/* <h1 style={{ fontWeight: 'bolder' }}>Students Attendence</h1> */}
-            <ResponsiveContainer width={350} height={250}>
+            <ResponsiveContainer width={950} height={350}>
                 <BarChart
                     data={dataForChart}
-                    margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
+                    margin={{ top: 0, right: 0, left: 0, bottom: 0 }}
                 >
                     <defs>
                         <linearGradient id="colorAttended" x1="0" y1="0" x2="0" y2="1">

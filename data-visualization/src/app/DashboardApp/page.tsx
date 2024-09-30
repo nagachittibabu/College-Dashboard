@@ -22,34 +22,28 @@ const DashboardHome = () => {
                 <div className="sidenav-container">
                     <Sidenav />
                 </div>
-
                 {/* Scrollable Content */}
-                <div className="content-area flex flex-wrap justify-center gap-12 mt-4">
+                <div className=" flex flex-wrap justify-center w-full ml-16">
                     {TitlecardData.map((item) => {
                         return (
                             <TitleCard
                                 Name={item.name}
                                 Description={item.description}
                                 numberof={item.count}
-                                iconpath={item.iconpath}
-                                className={item.bgcolor}
-                                widthClass={item.percent}
+                                imgpath={item.imgpath}
                                 pagenav={item.pagenavigation}
                             />
                         );
                     })}
                 </div>
                 <div className="w-full flex">
-                    <div className="w-3/4 mt-12">
-                        <div className="w-full flex ml-28">
-                            <div className="chartswidth  h-80 bg-white p-4 shadow-md rounded-md mr-12 mb-6">
+                    <div className="w-full  mt-12">
+                        <div className="w-3/4 flex ml-28">
+                            <div className="  bg-white p-4 shadow-md rounded-md mr-12 mb-6">
                                 <h3 className="text-lg font-semibold mb-4 text-center">Students Attendance Insights</h3>
                                 <AttendanceTrend />
                             </div>
-                            <div className="chartswidth  h-80 bg-white p-4 shadow-md rounded-md flex flex-col">
-                                <h3 className="text-lg font-semibold mb-4 text-center">Faculty Attendance Insights</h3>
-                                <AttendancePieChart />
-                            </div>
+                           
                         </div>
                         <div className="w-full flex ml-28 mt-10 ">
                             <div className="chartswidth  h-80 bg-white p-4 shadow-md rounded-md flex flex-col mr-12 mb-6">

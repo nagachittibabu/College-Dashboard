@@ -31,7 +31,7 @@ export default function RootLayout({
       <link rel="preload" href="/_next/static/css/antd/dist/reset.css" as="style" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased fontstyle`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased fontstyle bgcolor`}
       >
         {children}
       </body>

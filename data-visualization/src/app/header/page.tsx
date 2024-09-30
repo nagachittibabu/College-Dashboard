@@ -4,6 +4,9 @@ export default function Header() {
         <div className="w-full flex items-center justify-between pt-1 h-14 shadow-md fixed z-100 bg-white z-100">
           {/* Left Side Links */}
           <div className="flex gap-10 ml-36">
+            <a href="#">
+            <i className="fa-solid fa-bars"></i>
+            </a>
             <a href="" className="hover:text-orange-900">
               <h1>Dashboard</h1>
             </a>
