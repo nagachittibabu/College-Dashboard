@@ -57,9 +57,8 @@ const CustomTooltip: React.FC<any> = ({ payload, label }) => {
                 borderLeft: '10px solid transparent',
                 borderRight: '10px solid transparent',
                 borderBottom: '10px solid #fff'
-            }}>
-            </div>
-            <h4 style={{ margin: 0, fontWeight: 'bolder' }}>{`${label} (${weekNumber})`}</h4>
+            }}></div>
+                  <h4 style={{ margin: 0, fontWeight:'bolder' }}>{`${label} (${weekNumber})`}</h4>
             <p style={{ margin: '5px 0' }}><strong>Total Students:</strong> {totalStudents}</p>
             <p style={{ margin: '5px 0' }}><strong>Attended:</strong> {dataPoint.attended}</p>
             <p style={{ margin: '5px 0' } }><strong>Medical Leave:</strong> {dataPoint.medicalLeave}</p>

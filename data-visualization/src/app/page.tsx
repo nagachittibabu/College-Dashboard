@@ -8,7 +8,7 @@ import '../app/globals.css';
 import { useState, useEffect } from 'react';
 import { Spin } from 'antd';  // Import Ant Design's Spin component
 
-export default function Home() {
+export function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -40,4 +40,6 @@ export default function Home() {
 
 
   );
-}
+};
+
+export default App;

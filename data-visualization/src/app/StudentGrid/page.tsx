@@ -3,9 +3,13 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import type { TableColumnsType, TableProps } from 'antd';
 import { Table } from 'antd';
+import AttendanceTrend from '../trendline/trendline';
 import { Select } from 'antd';
 import { Input, Space } from 'antd';
+import { AudioOutlined } from '@ant-design/icons';
 import { Button } from 'antd';
+import Header from '../header/page';
+import Sidenav from '../sideNav/page';
 
 const StudentGrid: React.FC = () => {
   const [students, setStudents] = useState([]);
@@ -13,14 +17,14 @@ const StudentGrid: React.FC = () => {
   const [uniqueDepartments, setUniqueDepartments] = useState<string[]>([]);
   const [uniqueBranches, setUniqueBranches] = useState<string[]>([]);
 
-  useEffect(()    => {
+  useEffect(() => {
     fetch('/studentsdata/students.json')
       .then((response) => response.json())
       .then((data) => {
         setStudents(data);
-        const years = Array.from(new Set(data.map((student:any) => student.yearOfJoining))).sort();
-        const departments = Array.from(new Set(data.map((student:any) => student.department))).sort();
-        const branches = Array.from(new Set(data.map((student:any) => student.branch))).sort();
+        const years = Array.from(new Set(data.map(student => student.yearOfJoining))).sort();
+        const departments = Array.from(new Set(data.map(student => student.department))).sort();
+        const branches = Array.from(new Set(data.map(student => student.branch))).sort();
 
         setUniqueYears(years);
         setUniqueDepartments(departments);
@@ -29,6 +33,7 @@ const StudentGrid: React.FC = () => {
       .catch((error) => console.error('Error fetching the JSON file:', error));
   }, []);
   const onChange: TableProps['onChange'] = (pagination, filters, sorter, extra) => {
+    // console.log('params', pagination, filters, sorter, extra);
   };
   const expandedRowRender = (_record: any) => {
 
@@ -50,6 +55,7 @@ const StudentGrid: React.FC = () => {
         <>
           <Table
             columns={columns}
+            onChange={onChange}
             expandable={{ expandedRowRender }}
             dataSource={data}
             pagination={false}
@@ -87,15 +93,21 @@ const StudentGrid: React.FC = () => {
     { title: 'Department', dataIndex: 'department', key: 'department' },
     { title: 'Branch', dataIndex: 'branch', key: 'branch' },
     { title: 'Year', dataIndex: 'currentYear', key: 'currentYear' },
-    { title: 'Semister Percentage', dataIndex: 'currentPercentage', key: 'currentPercentage' },
-    { title: 'Attendence Percentage', dataIndex: 'attendencePercentage', key: 'attendencePercentage' },
+    { title: 'Attendance Percentage', dataIndex: 'attendancePercentage', key: 'attendancePercentage' },
+    { title: 'Semister Percentage', dataIndex: 'currentPercentage', key: 'currentPercentage' }
   ];
 
   const onSearch = (value: string) => console.log(value);
 
   return (
     <>
-      <div className='flex justify-between'>
+    <div className="header-container">
+    <Header />
+    </div>
+    <div className="sidenav-container">
+                    <Sidenav />
+                </div>
+    <div className='flex justify-between pt-20'>
         <div className='flex gap-4 ml-16'>
           <Select
             showSearch
@@ -123,7 +135,7 @@ const StudentGrid: React.FC = () => {
           </Space>
         </div>
       </div>
-      <Table
+      <Table className='pt-8 ml-4'
         columns={columns}
         expandable={{ expandedRowRender }}
         dataSource={students}
@@ -132,4 +144,4 @@ const StudentGrid: React.FC = () => {
   );
 };
 
-export default StudentGrid;
+export default StudentGrid;
