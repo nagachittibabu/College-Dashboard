@@ -46,7 +46,7 @@ const CustomTooltip: React.FC<any> = ({ payload, label }) => {
             padding: '10px',
             boxShadow: '0 2px 8px rgba(0, 0, 0, 0.15)',
             position: 'relative',
-            maxWidth: '300px'
+            maxWidth: '600px'
         }}>
             <div style={{
                 position: 'absolute',
@@ -72,15 +72,16 @@ const AttendanceTrend: React.FC = () => {
     return (
         <div>
             {/* <h1 style={{ fontWeight: 'bolder' }}>Students Attendence</h1> */}
-            <ResponsiveContainer width={950} height={350}>
+            <ResponsiveContainer width={"100%"} height={350}>
                 <BarChart
                     data={dataForChart}
-                    margin={{ top: 0, right: 0, left: 0, bottom: 0 }}
+                    margin={{ top: 0, right: 40, left: 0, bottom: 0 }}
                 >
                     <defs>
                         <linearGradient id="colorAttended" x1="0" y1="0" x2="0" y2="1">
                             <stop offset="5%" stopColor="#F97316" stopOpacity={0.9} />
                             <stop offset="95%" stopColor="#FDE68A" stopOpacity={0.8} />
+                            
                         </linearGradient>
                     </defs>
                     <CartesianGrid />

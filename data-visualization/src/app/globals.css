@@ -18,6 +18,7 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  color: black;
 }
 .bar{
   display: block;
@@ -37,9 +38,7 @@ body {
 .iconbg {
   background-color: rgba(0, 0, 0, 0.2);
 }
-.titlecards{
-  width: 26rem;
-}
+
 
 .chartswidth{
   width: 37.333333%;
@@ -108,4 +107,25 @@ body {
 
 .bgcolor{
   background:#00000009 ;
+}
+
+@media screen and (max-width: 1220px) {
+  body{
+    display: flex;
+  }
+  .titlecard {width: 50%; height: 200px; }
+  .titlecontent{display: flex; justify-content: space-between; align-items: center;}
+  .titlecarddiv{width: 100%; display: flex; justify-content: center; place-items: center;}
+  .attendence{width: 100%; display: block;}
+  .piechart{width: 50%;}
+  .finanicial{width: 50%;}
+  .resource{display: flex; flex-direction: column;}
+  .eventsarea{width: 100%; margin: 0 60px 0 60px; display: flex;}
+}
+@media screen and (max-width: 900px) {
+  body{
+    display: flex;
+  }
+  
+
 }
