@@ -1,53 +1,30 @@
-[
+[   
     {
-        "name":"Total Student Count",
-        "description":"The complete number of students enrolled in the current academic year.",
+        "name":"Total Students",
         "count":8320,
-        "percent":"w-3/4",
-        "iconpath":"fa-solid fa-users",
-        "bgcolor":"bg-gradient-to-r from-orange-500 to-yellow-200 ",
-        "pagenavigation":"../StudentGrid"
+        "imgpath":"/images/students.png",
+        "percentchange":"12",
+        "description":" Increase"
     },
     {
-        "name":"College Success Rate",
-        "description":"  The overall success rate of the college based on student performance and pass rates.",
-        "count":"86%",
-        "percent":"w-3/4",
-        "iconpath":"fa-solid fa-arrow-trend-up",
-        "bgcolor":"bg-gradient-to-r from-green-500 to-emerald-700"
-    },
-    
-    {
-        "name":"Course Catalog",
-        "description":"A list of all the academic programs and courses offered by the college.",
-        "count":42,
-        "percent":"w-1",
-        "iconpath":"fa-solid fa-book-open-reader",
-        "bgcolor":" bg-gradient-to-r from-gray-800  to-slate-400 "
+        "name":"Total Professors",
+        "count":1000,
+        "imgpath":"/images/students.png",
+        "percentchange":"10",
+        "description":"Increase"
     },
     {
-        "name":"Fee Income",
-        "description":"  The total revenue collected from student fees during the academic period.",
-        "count":"35,77,62,222",
-        "percent":"w-1/4",
-        "iconpath":"fa-solid fa-indian-rupee-sign",
-        "bgcolor":"bg-gradient-to-r from-pink-600 to-orange-400 "
-    },
+        "name":"Fee Collection",
+        "count":"₹.35,77,62,222/-",
+        "imgpath":"/images/students.png",
+        "percentchange":"48",
+        "description":" Total"
+    },   
     {
-        "name":"Faculty",
-        "description":"The total number of professors and faculty members at the institution.",
-        "count":432,
-        "percent":"w-1/3",
-        "iconpath":"fa-regular fa-user",
-        "bgcolor":"bg-gradient-to-r from-indigo-500 to-purple-400 "
-    },
-   
-    {
-        "name":"Financial Budget",
-        "description":" A detailed look at the college's annual budget and expenditure plan.",
-        "count":"8,64,00,000",
-        "percent":"w-1/2",
-        "iconpath":"fa-solid fa-money-bill",
-        "bgcolor":"bg-gradient-to-r from-cyan-600 to-cyan-400"
+        "name":"Fee Pending",
+        "count":"₹.8,64,00,000/-",
+        "imgpath":"/images/students.png",
+        "percentchange":"-51",
+        "description":" Total"
     }
 ]
