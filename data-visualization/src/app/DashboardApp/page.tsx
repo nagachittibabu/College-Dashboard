@@ -13,9 +13,9 @@ import Complaint from "../complaint"
 
 const DashboardHome = () => {
     return (
-        <div className="main-container">
+        <div className="main-container ">
             {/* Header */}
-            <div className="header-container">
+            <div className="header-container ">
                 <Header />
             </div>
 
@@ -38,20 +38,19 @@ const DashboardHome = () => {
                     })}
                 </div>
                 <div className="w-full flex resource ">
-                    <div className="w-3/4  mt-12 block">
-                        <div className="w-full flex attendence ">
+                    <div className="w-3/4  mt-12  attendence ">
+                        <div className="w-ful flex justify-center mx-4">
                             <div className="w-full  bg-white p-4 shadow-md rounded-md mb-6 ">
                                 <h3 className="text-lg font-semibold mb-4 text-center text-black">Students Attendance Insights</h3>
                                 <AttendanceTrend />
                             </div>
-
                         </div>
-                        <div className="w-full flex ml-28 mt-10 ">
-                            <div className="chartswidth  h-80 bg-white p-4 shadow-md rounded-md flex flex-col mr-12 mb-6 piechart">
+                        <div className="w-full flex mt-10 charts">
+                            <div className="chartswidth  h-80 bg-white p-4 shadow-md rounded-md  mb-6 piechart">
                                 <h3 className="text-lg font-semibold mb-4 text-center text-black">Teachers Attendence:</h3>
                                 <AttendancePieChart />
                             </div>
-                            <div className="chartswidth  h-80 bg-white p-4 shadow-md rounded-md flex flex-col financial">
+                            <div className="chartswidth  h-80 bg-white p-4 shadow-md rounded-md finanicial ">
                                 <h3 className="text-lg font-semibold mb-4 text-center text-black">Financial Health:</h3>
                                 <FeeAreaChart />
                             </div>
@@ -129,7 +128,7 @@ const DashboardHome = () => {
                     </div>
                 </div>
                 {/* Calendar */}
-                <div className="calendar-container">
+                <div className="calendar-container  w-full">
                     <Calender />
                 </div>
             </div>

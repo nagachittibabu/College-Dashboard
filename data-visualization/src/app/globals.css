@@ -41,7 +41,11 @@ body {
 
 
 .chartswidth{
-  width: 37.333333%;
+  width: 45%;
+}
+.charts{
+  display: flex;
+  justify-content: space-evenly;
 }
 @layer utilities {
   .text-balance {
@@ -109,23 +113,40 @@ body {
   background:#00000009 ;
 }
 
-@media screen and (max-width: 1220px) {
+@media screen and (max-width: 1200px) {
   body{
-    display: flex;
+    display: grid;
+    place-items: center;
+    margin-left: 30px;
+
   }
   .titlecard {width: 50%; height: 200px; }
   .titlecontent{display: flex; justify-content: space-between; align-items: center;}
   .titlecarddiv{width: 100%; display: flex; justify-content: center; place-items: center;}
-  .attendence{width: 100%; display: block;}
-  .piechart{width: 50%;}
-  .finanicial{width: 50%;}
+  .attendence{width: 100%; }
+  .piechart{width: 45%;}
+  .finanicial{width: 45%;}
   .resource{display: flex; flex-direction: column;}
-  .eventsarea{width: 100%; margin: 0 60px 0 60px; display: flex;}
+  .eventsarea{width: 100%;  display: flex;}
+  .main-div{display: grid; place-items: center;}
+  .calender{width: 100%;}
+  .header{width: 100%; display: flex; align-items: center; justify-content: center;}
 }
 @media screen and (max-width: 900px) {
   body{
     display: flex;
   }
-  
+  .titlecard {width:100%; height: 200px; }
+  .chartswidth{width: 100%;}
+  .charts{width: 100%; flex-direction: column; align-items: center;}
+}
+@media screen and (max-width: 510px) {
+  body{
+    display: flex;
+  }
+  .titlecard{width: 100%; display: block; height: 150px;}
+  .chartswidth{width: 90%;}
+  .attendence{width: 100%; }
+  .charts{width: 100%;}
 
 }
