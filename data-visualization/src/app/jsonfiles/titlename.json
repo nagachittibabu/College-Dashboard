@@ -3,28 +3,28 @@
         "name":"Total Students",
         "count":8320,
         "imgpath":"/images/students.png",
-        "percentchange":"12",
+        "percent":"12",
         "description":" Increase"
     },
     {
         "name":"Total Professors",
         "count":1000,
         "imgpath":"/images/students.png",
-        "percentchange":"10",
+        "percent":"10",
         "description":"Increase"
     },
     {
         "name":"Fee Collection",
         "count":"₹.35,77,62,222/-",
         "imgpath":"/images/students.png",
-        "percentchange":"48",
+        "percent":"48",
         "description":" Total"
     },   
     {
         "name":"Fee Pending",
         "count":"₹.8,64,00,000/-",
         "imgpath":"/images/students.png",
-        "percentchange":"-51",
+        "percent":"-51",
         "description":" Total"
     }
 ]

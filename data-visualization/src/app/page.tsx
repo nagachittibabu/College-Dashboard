@@ -32,7 +32,7 @@ export function App() {
         <Spin size="large" className="custom-spinner" tip="Loading..." />  {/* Ant Design's animated spinner */}
       </div>
     ) : (
-      <ConfigProvider theme={{ token: { colorPrimary: '#1890ff' } }}>
+      <ConfigProvider theme={{ tokpPen: { colorPrimary: '#1890ff' } }}>
       <DashboardHome></DashboardHome>
     </ConfigProvider>
     )}
