@@ -99,3 +99,9 @@ body {
 .fontstyle {
   font-family: 'Poppins' !important;
 }
+.transition-width {
+  transition: width 0.3s ease;
+}
+.menu-title {
+  display: none;
+}

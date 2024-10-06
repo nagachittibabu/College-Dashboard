@@ -10,6 +10,7 @@ import AttendancePieChart from "../piechart/page"
 import FeeAreaChart from "../areachart/page"
 import Titlecard from "../TileCards/page"
 import Calender from "../calender/page"
+import MenusideNav from "../menusideNav/page"
 
 const DashboardHome = () => {
     return (
@@ -24,7 +25,7 @@ const DashboardHome = () => {
             <div className="flex mt-16 content-container">
                 {/* Sidenav */}
                 <div className="sidenav-container">
-                    <Sidenav />
+                    <MenusideNav />
                 </div>
 
                 {/* Scrollable Content */}

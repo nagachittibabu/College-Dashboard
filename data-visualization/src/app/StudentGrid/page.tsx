@@ -130,9 +130,9 @@ const StudentGrid: React.FC = () => {
       <div className="header-container">
         <Header />
       </div>
-      <div className="sidenav-container">
+      {/* <div className="sidenav-container">
         <Sidenav />
-      </div>
+      </div> */}
       <div className='flex justify-between pt-20 px-8'>
         <div className='flex gap-4 ml-16'>
           <Select
