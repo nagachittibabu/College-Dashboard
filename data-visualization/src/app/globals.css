@@ -28,7 +28,7 @@ body {
 }
 .innerbar{
   display: block;
-  background-color: white;
+  background-color: black;
   height: 4px;
 }
 .innerbar:hover{
@@ -41,7 +41,7 @@ body {
 
 
 .chartswidth{
-  width: 45%;
+  width: 50%;
 }
 .charts{
   display: flex;
@@ -60,6 +60,7 @@ body {
 
 .main-container {
   height: 100vh; /* Full height of the viewport */
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -73,9 +74,14 @@ body {
   background-color: white; /* Or whatever background suits the design */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add some shadow if needed */
 }
+.scroll-hiddden::-webkit-scrollbar{
+  display: none;
+}
 
 .content-container {
   display: flex;
+  justify-content: space-between;
+  position: relative;
   flex-direction: row; /* Ensure proper row direction */
   flex-wrap: wrap; /* Allow wrapping if necessary */
   margin-top: 80px; /* Space for fixed header */
@@ -83,22 +89,23 @@ body {
 
 .sidenav-container {
   position: fixed;
-  top: 55px; /* Space for fixed header */
-  left: 0;
-  height: calc(100vh - 80px); /* Full height minus header */
-  width: 55px; /* Sidenav width */
+  left: 0; 
+  top: 55px;
   background-color: white; /* Adjust as per your design */
-  overflow-y: auto; /* Allows the sidenav to scroll if content is long */
   z-index: 1000;
+  flex-grow: 0;
 }
 
 .content-area {
-  display: flex;
-  flex-direction: row; /* Row direction for items */
-  flex-wrap: wrap; /* Allow items to wrap */
-  gap: 20px; /* Space between items */
+      flex-grow: 1;
 }
 
+.h-350{
+  height: 426px;
+}
+.mt-16 {
+  margin-top: 64px;
+}
 .calendar-container {
   margin-left: 260px; /* Space for fixed sidenav */
   margin-top: 20px; /* Adjust spacing */
@@ -124,21 +131,24 @@ body {
   .titlecontent{display: flex; justify-content: space-between; align-items: center;}
   .titlecarddiv{width: 100%; display: flex; justify-content: center; place-items: center;}
   .attendence{width: 100%; }
-  .piechart{width: 45%;}
-  .finanicial{width: 45%;}
+  .chartswidth{width: 50%;}
+  .chartswidth{width: 50%;}
   .resource{display: flex; flex-direction: column;}
   .eventsarea{width: 100%;  display: flex;}
   .main-div{display: grid; place-items: center;}
   .calender{width: 100%;}
-  .header{width: 100%; display: flex; align-items: center; justify-content: center;}
+  .header{width: 100%; display: flex; align-items: center; justify-content: center;padding-left: 0;}
 }
 @media screen and (max-width: 900px) {
   body{
     display: flex;
   }
   .titlecard {width:100%; height: 200px; }
-  .chartswidth{width: 100%;}
-  .charts{width: 100%; flex-direction: column; align-items: center;}
+  .charts{width: 100%; flex-direction: column;}
+  .chartswidth{width:100%;}
+  .attendence{width: 100%;}
+  .header{width: 100%;padding-left: 0; gap: 60px;}
+  .search{display: none;}
 }
 @media screen and (max-width: 510px) {
   body{

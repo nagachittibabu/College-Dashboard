@@ -1,9 +1,9 @@
 export default function Header() {
   return (
     <div className="">
-      <div className="w-full flex items-center justify-between pt-1 h-14 shadow-md fixed z-100 bg-white z-100 header">
+      <div className="w-full flex items-center justify-between pt-1 h-14 shadow-md fixed z-100 bg-white header pl-40">
         {/* Left Side Links */}
-        <div className="flex gap-10 ml-36 ">
+        <div className="flex gap-10 ">
           <a href="" className="hover:text-orange-900">
             <h1>Dashboard</h1>
           </a>
@@ -21,7 +21,7 @@ export default function Header() {
         {/* Right Side: Search + Notifications */}
         <div className="flex items-center gap-6 mr-18">
           {/* Search Input */}
-          <div className="relative">
+          <div className="relative search">
             <input
               type="text"
               placeholder="Enter employee name"
