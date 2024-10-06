@@ -1,6 +1,10 @@
-const Sidenav = () => {
+import "../../../public/main.js"
+
+const Sidenav = () => 
+{
     return (
-      <nav className="flex pl-2 flex-col items-center gap-10 w-fit p-4 bg-white shadow-lg border h-screen text-2xl fixed text-slate-700">
+      <div className=" bg-white " >
+      <nav className=" flex pl-2 flex-col items-center gap-10 !w-full block p-4  shadow-lg border text-2xl  text-slate-700">
         {[
           { icon: "fa-user-graduate", label: "Students", path:"./StudentGrid"},            
           { icon: "fa-trophy", label: "Academic Achievers" },          
@@ -24,6 +28,7 @@ const Sidenav = () => {
           </div>
         ))}
       </nav>
+      </div>
     );
   };
   

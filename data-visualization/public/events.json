@@ -1,0 +1,32 @@
+[
+    {
+        "month": "Jan",
+        "day": 23,
+        "events": "Mid Exams for B.tech 2nd year students",
+        "eventtype": "Mid Exams Schedule"
+    },
+    {
+        "month": "Feb",
+        "day": 19,
+        "events": "Semister Exams for B.tech 3th year students",
+        "eventtype": "Semister Exams Schedule"
+    },
+    {
+        "month": "Mar",
+        "day": 7,
+        "events": "Project Review for  B.tech 4th year students",
+        "eventtype": "Project Review Schedule"
+    },
+    {
+        "month": "April",
+        "day": 22,
+        "events": "Semister  Exams for B.tech 1st year students",
+        "eventtype": "Exams Schedule"
+    },
+    {
+        "month": "May",
+        "day": 1,
+        "events": "Summer Holidays",
+        "eventtype": "Holidays"
+    }
+]
