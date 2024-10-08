@@ -3,25 +3,14 @@ import React, { useState } from 'react';
 import MenusideNav from '../menusideNav/page';
 
 export default function Header() {
-    const [isSidenavOpen, setIsSidenavOpen] = useState(false);
-    const [isMinimized, setIsMinimized] = useState(false);
-
-    const toggleSidenav = () => {
-        if (isSidenavOpen) {
-            setIsMinimized(prev => !prev);
-        } else {
-            setIsSidenavOpen(true);
-        }
-    };
 
     return (
         <div>
             {/* Sidenav */}
-            <MenusideNav isOpen={isSidenavOpen} isMinimized={isMinimized} />
 
             <div className="w-full flex items-center justify-between pt-1 h-14 shadow-md fixed z-100 bg-white">
                 <div className="flex gap-10 ml-36">
-                    <a href="#" onClick={toggleSidenav}>
+                    <a href="#" >
                         <i className="fa-solid fa-bars"></i>
                     </a>
                     <a href="#" className="hover:text-orange-200">
