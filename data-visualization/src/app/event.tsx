@@ -12,8 +12,8 @@ const Eventcard = ({
                 </div>
                 <div className="w-3/4 h-14 flex align-start text-xm">
                     <div>
-                        <div className="text-left text-xl font-semibold">{eventtype}</div>
-                        <div>{events}</div>
+                        <div className="text-left text-base font-semibold">{eventtype}</div>
+                        <div className="text-sm">{events}</div>
                     </div>
                 </div>      
             </div>

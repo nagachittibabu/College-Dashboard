@@ -6,6 +6,11 @@ import type { Dayjs } from 'dayjs';
 
 const ReachableContext = createContext<string | null>(null);
 
+const wrapperStyle: React.CSSProperties = {
+  width: 400,
+  border:"3px solid black",
+};
+
 const getListData = (value: Dayjs) => {
   let listData: { type: string; content: string }[] = []; // Specify the type of listData
   switch (value.date()) {
