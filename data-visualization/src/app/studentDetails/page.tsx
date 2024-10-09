@@ -42,10 +42,6 @@ const StudentDetails = () => {
                                             <span className="mb-0 text-lg">{details.department}</span>
                                             <p className="my-5 py-3">{details.branch}</p>
                                         </div>
-                                        <div className="flex justify-center py-8">
-                                            <button className="bg-orange-500 rounded-full px-4 py-2 text-white mr-2">Follow</button>
-                                            <button className="bg-orange-200 rounded-full px-5 py-2 text-orange-600">Message</button>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -59,10 +55,16 @@ const StudentDetails = () => {
                                         <div className="leading-9 pb-3">
                                             <p><i className="fa-solid fa-graduation-cap me-1"></i><strong>Name:</strong> {details.name}</p>
                                             <p><i className="fa-solid fa-star me-1"></i><strong>AdmissionNumber:</strong> {details.admissionNumber}</p>
-
-                                            <p><i className="fa-solid fa-star me-1"></i><strong>Department:</strong> {details.department}</p>
+                                            <p><i className="fa-solid fa-building me-1"></i><strong>Department:</strong> {details.department}</p>
                                             <p><i className="fa-solid fa-star me-1"></i><strong>Branch:</strong> {details.branch}</p>
-
+                                            <div className='flex gap-6'>
+                                                <p><i className="fa-solid fa-phone me-1"></i><strong>ContactNumber:</strong> {details.mobileNumber}</p>
+                                                <p><i className="fa-solid fa-phone me-1"></i><strong>ParentNumber:</strong> {details.parentContact}</p>
+                                            </div>
+                                            <div className='flex gap-14'>
+                                                <p><i className="fa-solid fa-chart-simple me-1"></i><strong>CurrentPercentage:</strong> {details.currentPercentage}</p>
+                                                <p><i className="fa-solid fa-clipboard-user me-1"></i><strong>AttendancePercentage:</strong> {details.attendancePercentage}</p>
+                                            </div>
                                         </div>
                                         <hr />
 
@@ -72,7 +74,7 @@ const StudentDetails = () => {
                         </div>
                     )}
                 </div>
-                
+
             </div>
         </>
     );
