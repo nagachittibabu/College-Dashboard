@@ -1,21 +1,20 @@
 import "../../../public/main.js"
 
-const Sidenav = () => 
-{
-    return (
-      <div className=" bg-white " >
+const Sidenav = () => {
+  return (
+    <div className=" bg-white " >
       <nav className=" flex pl-2 flex-col items-center gap-10 !w-full block p-4  shadow-lg border text-2xl  text-slate-700">
         {[
-          { icon: "fa-user-graduate", label: "Students", path:"./StudentGrid"},            
-          { icon: "fa-trophy", label: "Academic Achievers" },          
-          { icon: "fa-exclamation-triangle", label: "Academic Deficiencies" }, 
-          { icon: "fa-chalkboard-teacher", label: "Faculty" },         
-          { icon: "fa-money-bill-wave", label: "Fee Collection" },     
-          { icon: "fa-piggy-bank", label: "Budget" },                  
-          { icon: "fa-book", label: "Courses" },                       
+          { icon: "fa-user-graduate", label : "Students", path: "./StudentGrid" },
+          { icon: "fa-trophy", label: "Academic Achievers" },
+          { icon: "fa-exclamation-triangle", label: "Academic Deficiencies" },
+          { icon: "fa-chalkboard-teacher", label: "Faculty" },
+          { icon: "fa-money-bill-wave", label: "Fee Collection" },
+          { icon: "fa-piggy-bank", label: "Budget" },
+          { icon: "fa-book", label: "Courses" },
           { icon: "fa-user", label: "Account Details" },
-          { icon: "fa-users-cog", label: "Manage Accounts" },          
-          { icon: "fa-sign-out-alt", label: "Logout" }                 
+          { icon: "fa-users-cog", label: "Manage Accounts" },
+          { icon: "fa-sign-out-alt", label: "Logout" }
         ].map((item, index) => (
           <div key={index} className="relative group">
             <a href={item.path}>
@@ -28,9 +27,9 @@ const Sidenav = () =>
           </div>
         ))}
       </nav>
-      </div>
-    );
-  };
-  
-  export default Sidenav;
-  
+    </div>
+  );
+};
+
+export default Sidenav;
+

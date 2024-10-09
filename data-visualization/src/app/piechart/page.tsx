@@ -12,8 +12,8 @@ const AttendancePieChart = () => {
   const COLORS = ['#00C49F', '#FF8042', '#FFBB28'];
 
   return (
-    <div className="flex justify-center items-center mt-6">
-      <PieChart width={400} height={239}>
+    <div className="flex justify-center items-center ">
+      <PieChart width={400} height={250}>
         <Pie
           data={data}
           cx={200} // x coordinate of center of pie chart
