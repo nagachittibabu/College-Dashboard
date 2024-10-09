@@ -1,6 +1,10 @@
 [
     {
-        "imagepath":"./images/photo_0.jpg" ,
-        "complaint":"Professor was abssent from 1week"
+        "imagepath":"./images/students.png" ,
+        "complaint":"Students escape from the class"
+    },
+    {
+        "imagepath":"./images/students.png" ,
+        "complaint":"Students escape from the class"
     }
 ]

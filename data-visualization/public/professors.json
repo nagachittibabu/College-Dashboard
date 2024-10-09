@@ -1,0 +1,408 @@
+[
+  {
+    "key": 0,
+    "professorId": "P123001",
+    "name": "Rama Krishna",
+    "qualification": "M.Tech",
+    "experience": "3",
+    "department": "Engineering",
+    "role": "Professor",
+    "email": "rama.krishna0@gmail.com",
+    "mobileNumber": "9876543210",
+    "alternateMobileNumber": "9876543211",
+    "address": "Flat No. 301, Sai Mansion, Gachibowli, Hyderabad, Telangana, 500032",
+    "photo": "/images/photo_0.jpg",
+    "details": {
+      "key": 0.1,
+      "subjects": [
+        { "subjectName": "Advanced Mathematics" },
+        { "subjectName": "Quantum Mechanics" },
+        { "subjectName": "Calculus" },
+        { "subjectName": "Introduction to Programming" }
+      ],
+      "totalLeavesApplied": "4",
+      "medicalLeaves": "6",
+      "personalLeaves": "10",
+      "unpaidLeaves": "20",
+      "leaveBalance": "30"
+    }
+  },
+  {
+    "key": 1,
+    "professorId": "P123002",
+    "name": "Krishna",
+    "qualification": "M.Tech",
+    "experience": "4",
+    "department": "Engineering",
+    "role": "Professor",
+    "email": "krishna1@gmail.com",
+    "mobileNumber": "9876543212",
+    "alternateMobileNumber": "9876543213",
+    "address": "No. 25, Pinnacle Towers, Madhapur, Hyderabad, Telangana, 500081",
+    "photo": "/images/photo_0.jpg",
+    "details": {
+      "key": 1.1,
+      "subjects": [
+        { "subjectName": "Calculus" },
+        { "subjectName": "Electromagnetics" },
+        { "subjectName": "Data Structures" }
+      ],
+      "totalLeavesApplied": "5",
+      "medicalLeaves": "7",
+      "personalLeaves": "12",
+      "unpaidLeaves": "18",
+      "leaveBalance": "30"
+    }
+  },
+  {
+    "key": 2,
+    "professorId": "P123003",
+    "name": "Ramya",
+    "qualification": "M.Tech",
+    "experience": "5",
+    "department": "Engineering",
+    "role": "Professor",
+    "email": "ramya@gmail.com",
+    "mobileNumber": "9876543214",
+    "alternateMobileNumber": "9876543215",
+    "address": "House No. 12-3-345, Kukatpally, Hyderabad, Telangana, 500072",
+    "photo": "/images/photo_0.jpg",
+    "details": {
+      "key": 2.1,
+      "subjects": [
+        { "subjectName": "Probability and Statistics" },
+        { "subjectName": "Modern Physics" },
+        { "subjectName": "Software Engineering" }
+      ],
+      "totalLeavesApplied": "6",
+      "medicalLeaves": "8",
+      "personalLeaves": "14",
+      "unpaidLeaves": "16",
+      "leaveBalance": "24"
+    }
+  },
+  {
+    "key": 3,
+    "professorId": "P123004",
+    "name": "Rama Rao",
+    "qualification": "M.Tech",
+    "experience": "6",
+    "department": "Engineering",
+    "role": "Professor",
+    "email": "rama.rao@gmail.com",
+    "mobileNumber": "9876543216",
+    "alternateMobileNumber": "9876543217",
+    "address": "Plot No. 56, Lane 12, Banjara Hills, Hyderabad, Telangana, 500034",
+    "photo": "/images/photo_0.jpg",
+    "details": {
+      "key": 3.1,
+      "subjects": [
+        { "subjectName": "Thermodynamics" },
+        { "subjectName": "Circuit Theory" },
+        { "subjectName": "Database Management Systems" }
+      ],
+      "totalLeavesApplied": "7",
+      "medicalLeaves": "9",
+      "personalLeaves": "16",
+      "unpaidLeaves": "15",
+      "leaveBalance": "22"
+    }
+  },
+  {
+    "key": 4,
+    "professorId": "P123005",
+    "name": "Rama Krishna",
+    "qualification": "M.Tech",
+    "experience": "7",
+    "department": "Engineering",
+    "role": "Professor",
+    "email": "rama.krishna4@gmail.com",
+    "mobileNumber": "9876543218",
+    "alternateMobileNumber": "9876543219",
+    "address": "Flat No. 203, Sri Ramakrishna Heights, Secunderabad, Hyderabad, Telangana, 500003",
+    "photo": "/images/photo_0.jpg",
+    "details": {
+      "key": 4.1,
+      "subjects": [
+        { "subjectName": "Linear Algebra" },
+        { "subjectName": "Control Systems" },
+        { "subjectName": "Microprocessors" }
+      ],
+      "totalLeavesApplied": "8",
+      "medicalLeaves": "10",
+      "personalLeaves": "18",
+      "unpaidLeaves": "14",
+      "leaveBalance": "20"
+    }
+  },
+  {
+    "key": 5,
+    "professorId": "P123006",
+    "name": "Rama Krishna",
+    "qualification": "M.Tech",
+    "experience": "8",
+    "department": "Engineering",
+    "role": "Professor",
+    "email": "rama.krishna5@gmail.com",
+    "mobileNumber": "9876543220",
+    "alternateMobileNumber": "9876543221",
+    "address": "No. 78, Sai Ram Nagar, Attapur, Hyderabad, Telangana, 500048",
+    "photo": "/images/photo_0.jpg",
+    "details": {
+      "key": 5.1,
+      "subjects": [
+        { "subjectName": "Numerical Methods" },
+        { "subjectName": "Digital Logic Design" },
+        { "subjectName": "Operating Systems" }
+      ],
+      "totalLeavesApplied": "9",
+      "medicalLeaves": "11",
+      "personalLeaves": "20",
+      "unpaidLeaves": "12",
+      "leaveBalance": "22"
+    }
+  },
+  {
+    "key": 6,
+    "professorId": "P123007",
+    "name": "Asha Devi",
+    "qualification": "Ph.D.",
+    "experience": "10",
+    "department": "Engineering",
+    "role": "Associate Professor",
+    "email": "asha.devi@gmail.com",
+    "mobileNumber": "9887654321",
+    "alternateMobileNumber": "9887654322",
+    "address": "No. 101, Sun City, LB Nagar, Hyderabad, Telangana, 500074",
+    "photo": "/images/photo_0.jpg",
+    "details": {
+      "key": 6.1,
+      "subjects": [
+        { "subjectName": "Engineering Mechanics" },
+        { "subjectName": "Thermodynamics" },
+        { "subjectName": "Data Structures" }
+      ],
+      "totalLeavesApplied": "2",
+      "medicalLeaves": "3",
+      "personalLeaves": "8",
+      "unpaidLeaves": "25",
+      "leaveBalance": "30"
+    }
+  },
+  {
+    "key": 7,
+    "professorId": "P123008",
+    "name": "Vikram Singh",
+    "qualification": "M.Tech",
+    "experience": "5",
+    "department": "Engineering",
+    "role": "Professor",
+    "email": "vikram.singh@gmail.com",
+    "mobileNumber": "9898765432",
+    "alternateMobileNumber": "9898765433",
+    "address": "No. 9, Orchid Apartments, KPHB, Hyderabad, Telangana, 500072",
+    "photo": "/images/photo_0.jpg",
+    "details": {
+      "key": 7.1,
+      "subjects": [
+        { "subjectName": "Digital Electronics" },
+        { "subjectName": "Control Systems" },
+        { "subjectName": "Microprocessors" }
+      ],
+      "totalLeavesApplied": "4",
+      "medicalLeaves": "5",
+      "personalLeaves": "12",
+      "unpaidLeaves": "18",
+      "leaveBalance": "25"
+    }
+  },
+  {
+    "key": 8,
+    "professorId": "P123009",
+    "name": "Neelam Reddy",
+    "qualification": "M.Tech",
+    "experience": "6",
+    "department": "Engineering",
+    "role": "Professor",
+    "email": "neelam.reddy@gmail.com",
+    "mobileNumber": "9900990099",
+    "alternateMobileNumber": "9900990100",
+    "address": "No. 345, Venkatesh Nagar, Jubilee Hills, Hyderabad, Telangana, 500033",
+    "photo": "/images/photo_0.jpg",
+    "details": {
+      "key": 8.1,
+      "subjects": [
+        { "subjectName": "Embedded Systems" },
+        { "subjectName": "Microcontrollers" },
+        { "subjectName": "VLSI Design" }
+      ],
+      "totalLeavesApplied": "3",
+      "medicalLeaves": "4",
+      "personalLeaves": "10",
+      "unpaidLeaves": "22",
+      "leaveBalance": "29"
+    }
+  },
+  {
+    "key": 9,
+    "professorId": "P123010",
+    "name": "Kiran Kumar",
+    "qualification": "M.Tech",
+    "experience": "7",
+    "department": "Engineering",
+    "role": "Associate Professor",
+    "email": "kiran.kumar@gmail.com",
+    "mobileNumber": "9911991199",
+    "alternateMobileNumber": "9911991200",
+    "address": "No. 123, Technopolis, Hitech City, Hyderabad, Telangana, 500081",
+    "photo": "/images/photo_0.jpg",
+    "details": {
+      "key": 9.1,
+      "subjects": [
+        { "subjectName": "Software Engineering" },
+        { "subjectName": "Database Systems" },
+        { "subjectName": "Operating Systems" }
+      ],
+      "totalLeavesApplied": "3",
+      "medicalLeaves": "4",
+      "personalLeaves": "15",
+      "unpaidLeaves": "20",
+      "leaveBalance": "25"
+    }
+  },
+  {
+    "key": 10,
+    "professorId": "P123011",
+    "name": "Priya Sinha",
+    "qualification": "M.Tech",
+    "experience": "4",
+    "department": "Engineering",
+    "role": "Assistant Professor",
+    "email": "priya.sinha@gmail.com",
+    "mobileNumber": "9922334455",
+    "alternateMobileNumber": "9922334466",
+    "address": "No. 45, New Heights, Ameerpet, Hyderabad, Telangana, 500016",
+    "photo": "/images/photo_0.jpg",
+    "details": {
+      "key": 10.1,
+      "subjects": [
+        { "subjectName": "Computer Networks" },
+        { "subjectName": "Web Technologies" },
+        { "subjectName": "Computer Architecture" }
+      ],
+      "totalLeavesApplied": "2",
+      "medicalLeaves": "2",
+      "personalLeaves": "6",
+      "unpaidLeaves": "23",
+      "leaveBalance": "28"
+    }
+  },
+  {
+    "key": 11,
+    "professorId": "P123012",
+    "name": "Amit Sharma",
+    "qualification": "Ph.D.",
+    "experience": "12",
+    "department": "Engineering",
+    "role": "Professor",
+    "email": "amit.sharma@gmail.com",
+    "mobileNumber": "9933445566",
+    "alternateMobileNumber": "9933445577",
+    "address": "No. 22, Prestige Plaza, Gachibowli, Hyderabad, Telangana, 500032",
+    "photo": "/images/photo_0.jpg",
+    "details": {
+      "key": 11.1,
+      "subjects": [
+        { "subjectName": "Advanced Algorithms" },
+        { "subjectName": "Machine Learning" },
+        { "subjectName": "Artificial Intelligence" }
+      ],
+      "totalLeavesApplied": "5",
+      "medicalLeaves": "6",
+      "personalLeaves": "14",
+      "unpaidLeaves": "21",
+      "leaveBalance": "30"
+    }
+  },
+  {
+    "key": 12,
+    "professorId": "P123013",
+    "name": "Sneha Reddy",
+    "qualification": "M.Tech",
+    "experience": "3",
+    "department": "Engineering",
+    "role": "Assistant Professor",
+    "email": "sneha.reddy@gmail.com",
+    "mobileNumber": "9944556677",
+    "alternateMobileNumber": "9944556688",
+    "address": "No. 89, Golden Towers, Banjara Hills, Hyderabad, Telangana, 500034",
+    "photo": "/images/photo_0.jpg",
+    "details": {
+      "key": 12.1,
+      "subjects": [
+        { "subjectName": "Digital Signal Processing" },
+        { "subjectName": "Communication Systems" },
+        { "subjectName": "Wireless Networks" }
+      ],
+      "totalLeavesApplied": "4",
+      "medicalLeaves": "3",
+      "personalLeaves": "9",
+      "unpaidLeaves": "21",
+      "leaveBalance": "27"
+    }
+  },
+  {
+    "key": 13,
+    "professorId": "P123014",
+    "name": "Rajesh Kumar",
+    "qualification": "M.Tech",
+    "experience": "6",
+    "department": "Engineering",
+    "role": "Professor",
+    "email": "rajesh.kumar@gmail.com",
+    "mobileNumber": "9955667788",
+    "alternateMobileNumber": "9955667799",
+    "address": "No. 56, The Towers, Jubilee Hills, Hyderabad, Telangana, 500033",
+    "photo": "/images/photo_0.jpg",
+    "details": {
+      "key": 13.1,
+      "subjects": [
+        { "subjectName": "Control Systems" },
+        { "subjectName": "Signal Processing" },
+        { "subjectName": "System Design" }
+      ],
+      "totalLeavesApplied": "6",
+      "medicalLeaves": "5",
+      "personalLeaves": "13",
+      "unpaidLeaves": "18",
+      "leaveBalance": "25"
+    }
+  },
+  {
+    "key": 14,
+    "professorId": "P123015",
+    "name": "Anita Mehta",
+    "qualification": "M.Tech",
+    "experience": "5",
+    "department": "Engineering",
+    "role": "Associate Professor",
+    "email": "anita.mehta@gmail.com",
+    "mobileNumber": "9966778899",
+    "alternateMobileNumber": "9966778800",
+    "address": "No. 34, Prime Residence, Hitech City, Hyderabad, Telangana, 500081",
+    "photo": "/images/photo_0.jpg",
+    "details": {
+      "key": 14.1,
+      "subjects": [
+        { "subjectName": "Computer Vision" },
+        { "subjectName": "Robotics" },
+        { "subjectName": "Machine Learning" }
+      ],
+      "totalLeavesApplied": "3",
+      "medicalLeaves": "2",
+      "personalLeaves": "7",
+      "unpaidLeaves": "25",
+      "leaveBalance": "30"
+    }
+  }
+]

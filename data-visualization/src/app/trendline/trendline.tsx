@@ -70,9 +70,9 @@ const CustomTooltip: React.FC<any> = ({ payload, label }) => {
 
 const AttendanceTrend: React.FC = () => {
     return (
-        <div>
+        <div className=' z-0'>
             {/* <h1 style={{ fontWeight: 'bolder' }}>Students Attendence</h1> */}
-            <ResponsiveContainer width={"100%"} height={350}>
+            <ResponsiveContainer width={"100%"} height={350} >
                 <BarChart
                     data={dataForChart}
                     margin={{ top: 0, right: 40, left: 0, bottom: 0 }}

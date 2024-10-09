@@ -11,8 +11,9 @@ const data = [
 
 const FeeLineChart = () => {
   return (
-    <ResponsiveContainer width={"100%"} height={250}>
-      <LineChart data={data}>
+    <div>
+    <ResponsiveContainer width={"90%"} height={250} >
+      <LineChart data={data} >
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="month" />
         <YAxis />
@@ -24,6 +25,7 @@ const FeeLineChart = () => {
         <Line type="monotone" dataKey="balance" stroke="#FBBF24" strokeWidth={2} dot={{ stroke: '#FBBF24', strokeWidth: 2 }} activeDot={{ r: 6 }} />
       </LineChart>
     </ResponsiveContainer>
+    </div>
   );
 };
 

@@ -19,7 +19,7 @@ const ProfessorGrid: React.FC = () => {
                 { title: 'Leave Balance', dataIndex: 'leaveBalance', key: 'leaveBalance' },
                 {title: 'Subjects', dataIndex: 'subjects', key: 'subjects',
                     render: (subjects) => (
-                        <ul>
+                        <ul style={{ listStyleType: 'disc', paddingLeft: '20px' }}>
                             {subjects.map((subject: any, index: number) => (
                                 <li key={index}>{subject.subjectName}</li>
                             ))}
@@ -43,7 +43,7 @@ const ProfessorGrid: React.FC = () => {
     };
 
     const columns: TableColumnsType = [
-        { title: 'Photo', dataIndex: 'photo', key: 'photo', render: (text: string) => <img src={text} alt="Professor" className="rounded-full" /> },
+        { title: 'Photo', dataIndex: 'photo', key: 'photo', render: (text: string) => <img src={text} alt="Professor" className="rounded-full w-2/5" /> },
         {
             title: 'ID', dataIndex: 'professorId', key: 'professorId', defaultSortOrder: 'descend',
             sorter: (a, b) => a.professorId - b.professorId
@@ -58,6 +58,7 @@ const ProfessorGrid: React.FC = () => {
         { title: 'Role', dataIndex: 'role', key: 'role' },
         { title: 'Email', dataIndex: 'email', key: 'email' },
         { title: 'Phone Number', dataIndex: 'mobileNumber', key: 'mobileNumber'},
+        { title: 'Alternate Number', dataIndex: 'alternateMobileNumber', key: 'alternateMobileNumber'},
         { title: 'Address', dataIndex: 'address', key: 'address'}
     ];
 
@@ -88,8 +89,8 @@ const ProfessorGrid: React.FC = () => {
         <div className='sidenav-container'>
             <Sidenav />
         </div>
-            <div className='flex justify-between p-5 ml-10'>
-                <div>
+            <div className='flex justify-between px-20 pt-20 pb-5'>
+                <div className='flex gap-4 ml-16'>
                     <Select
                         showSearch
                         style={{ width: 200 }}
