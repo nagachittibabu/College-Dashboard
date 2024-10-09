@@ -11,20 +11,21 @@ const data = [
 
 const FeeLineChart = () => {
   return (
-    <div>
-    <ResponsiveContainer width={"90%"} height={250} >
-      <LineChart data={data} >
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="month" />
-        <YAxis />
-        <Tooltip />
-        <Legend />
-        
-        <Line type="monotone" dataKey="feeCollected" stroke="#D946EF" strokeWidth={2} dot={{ stroke: '#D946EF', strokeWidth: 2 }} activeDot={{ r: 6 }} />
-        <Line type="monotone" dataKey="totalFee" stroke="#F97316" strokeWidth={2} dot={{ stroke: '#F97316', strokeWidth: 2 }} activeDot={{ r: 6 }} />
-        <Line type="monotone" dataKey="balance" stroke="#FBBF24" strokeWidth={2} dot={{ stroke: '#FBBF24', strokeWidth: 2 }} activeDot={{ r: 6 }} />
-      </LineChart>
-    </ResponsiveContainer>
+    <div className='w-full space-y-4 pt-6 px-4 flex flex-col justify-center items-center'>
+      <h1 className='w-full text-center text-xl font-semibold'>Finacial chart</h1>
+      <ResponsiveContainer  width={450} height={250}>
+        <LineChart data={data} >
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="month" />
+          <YAxis />
+          <Tooltip />
+          <Legend />
+
+          <Line type="monotone" dataKey="feeCollected" stroke="#D946EF" strokeWidth={2} dot={{ stroke: '#D946EF', strokeWidth: 2 }} activeDot={{ r: 6 }} />
+          <Line type="monotone" dataKey="totalFee" stroke="#F97316" strokeWidth={2} dot={{ stroke: '#F97316', strokeWidth: 2 }} activeDot={{ r: 6 }} />
+          <Line type="monotone" dataKey="balance" stroke="#FBBF24" strokeWidth={2} dot={{ stroke: '#FBBF24', strokeWidth: 2 }} activeDot={{ r: 6 }} />
+        </LineChart>
+      </ResponsiveContainer>
     </div>
   );
 };
