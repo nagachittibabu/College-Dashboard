@@ -35,7 +35,7 @@ const DashboardHome = () => {
                                     numberof={item.count}
                                     imgpath={item.imgpath}
                                     percent={item.percent}
-                                    pagenav={""}
+                                    pagenav={item.pagenav}
                                 />
                             );
                         })}

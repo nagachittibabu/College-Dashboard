@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from 'react';
-import MenusideNav from '../menusideNav/page';
 
 export default function Header() {
   return (

@@ -4,8 +4,11 @@ import type { TableColumnsType } from 'antd';
 import { Table, Select, Input, Space, Button } from 'antd';
 import Header from '../header/page';
 import Sidenav from '../sideNav/page';
+import { useRouter } from 'next/navigation';
+import MenusideNav from '../sideNav/page';
 
 const StudentGrid: React.FC = () => {
+  const router = useRouter();
   const [students, setStudents] = useState<any[]>([]);
   const [filteredStudents, setFilteredStudents] = useState<any[]>([]);
   const [uniqueYears, setUniqueYears] = useState<string[]>([]);
@@ -97,30 +100,94 @@ const StudentGrid: React.FC = () => {
       return <Table columns={columns} dataSource={record.subjects} pagination={false} />;
     }
   };
+  const SelectedStudent = (item) => {
+    console.log(item)
+    router.push(`/studentDetails/${item}`)
+
+  }
+
 
   const columns: TableColumnsType = [
-    {
-      title: 'Admission Number', dataIndex: 'admissionNumber', key: 'admissionNumber', defaultSortOrder: 'descend',
-      sorter: (a, b) => a.admissionNumber - b.admissionNumber
+
+    { 
+      title: 'Admission Number',dataIndex: 'admissionNumber', key: 'admissionNumber',defaultSortOrder: 'descend',
+      sorter: (a: any, b: any) => a.admissionNumber - b.admissionNumber,
+      render: (text: any, record: any) => (
+        <span onClick={() => SelectedStudent(record.key)}>{text}</span>
+      ),
     },
     {
-      title: 'Roll Number', dataIndex: 'rollNumber', key: 'rollNumber', defaultSortOrder: 'descend',
-      sorter: (a, b) => a.rollNumber - b.rollNumber
+      title: 'Roll Number',dataIndex: 'rollNumber', key: 'rollNumber',defaultSortOrder: 'descend',
+      sorter: (a: any, b: any) => a.rollNumber - b.rollNumber,
+      render: (text: any, record: any) => ( 
+      <span onClick={() => SelectedStudent(record.key)}>{text}</span>
+      ),
     },
     {
-      title: 'Name', dataIndex: 'name', key: 'name', defaultSortOrder: 'descend',
-      sorter: (a, b) => a.name.localeCompare(b.name)
+      title: 'Name', dataIndex: 'name',key: 'name',defaultSortOrder: 'descend',
+      sorter: (a: any, b: any) => a.name.localeCompare(b.name),
+      render: (text: any, record: any) => (
+        <span onClick={() => SelectedStudent(record.key)}>{text}</span>
+      ),
     },
-    { title: 'Contact', dataIndex: 'mobileNumber', key: 'mobileNumber' },
-    { title: 'Parent Name', dataIndex: 'parentName', key: 'parentName' },
-    { title: 'Parent Contact', dataIndex: 'parentContact', key: 'parentContact' },
-    { title: 'Joined On', dataIndex: 'yearOfJoining', key: 'yearOfJoining' },
-    { title: 'Department', dataIndex: 'department', key: 'department' },
-    { title: 'Branch', dataIndex: 'branch', key: 'branch' },
-    { title: 'Year', dataIndex: 'currentYear', key: 'currentYear' },
-    { title: 'Attendance %', dataIndex: 'attendancePercentage', key: 'attendancePercentage' },
-    { title: 'Semester %', dataIndex: 'currentPercentage', key: 'currentPercentage' },
-    { title: 'Balance', dataIndex: 'feeBalance', key: 'feeBalance' }
+    {
+      title: 'Contact', dataIndex: 'mobileNumber', key: 'mobileNumber', render: (text: any, record: any) => (
+        <span onClick={() => SelectedStudent(record.key)}> {text}</span>
+      )
+    },
+    {
+      title: 'Parent Name', dataIndex: 'parentName', key: 'parentName', render: (text: any, record: any) => (
+        <span onClick={() => SelectedStudent(record.key)}>{text}</span>
+      ),
+    },
+    {
+      title: 'Parent Contact', dataIndex: 'parentContact', key: 'parentContact', render: (text: any, record: any) => (
+        <span onClick={() => SelectedStudent(record.key)}>{text}</span>
+      ),
+    },
+    {
+      title: 'Joined On', dataIndex: 'yearOfJoining', key: 'yearOfJoining', render: (text: any, record: any) => (
+        <span onClick={() => SelectedStudent(record.key)}>{text}</span>
+      ),
+    },
+    {
+      title: 'Department', dataIndex: 'department', key: 'department', render: (text: any, record: any) => (
+        <span onClick={() => SelectedStudent(record.key)}>{text}</span>
+      ),
+    },
+    {
+      title: 'Branch', dataIndex: 'branch', key: 'branch', render: (text: any, record: any) => (
+        <span onClick={() => SelectedStudent(record.key)}>{text}</span>
+      ),
+    },
+    {
+      title: 'Year', dataIndex: 'currentYear', key: 'currentYear', render: (text: any, record: any) => (
+        <span onClick={() => SelectedStudent(record.key)}>{text}</span>
+      ),
+    },
+    {
+      title: 'Attendance %', dataIndex: 'attendancePercentage', key: 'attendancePercentage', render: (text: any, record: any) => (
+        <span onClick={() => SelectedStudent(record.key)}>{text}</span>
+      ),
+    },
+    {
+      title: 'Semester %', dataIndex: 'currentPercentage', key: 'currentPercentage', render: (text: any, record: any) => (
+        <span
+          onClick={() => SelectedStudent(record.key)}
+        >
+          {text}
+        </span>
+      ),
+    },
+    {
+      title: 'Balance', dataIndex: 'feeBalance', key: 'feeBalance', render: (text: any, record: any) => (
+        <span
+          onClick={() => SelectedStudent(record.key)}
+        >
+          {text}
+        </span>
+      ),
+    },
   ];
 
   const onSearch = (value: string) => console.log(value);
@@ -130,9 +197,9 @@ const StudentGrid: React.FC = () => {
       <div className="header-container">
         <Header />
       </div>
-      {/* <div className="sidenav-container">
-        <Sidenav />
-      </div> */}
+      <div className="sidenav-container">
+        <MenusideNav />
+      </div>
       <div className='flex justify-between pt-20 px-8'>
         <div className='flex gap-4 ml-16'>
           <Select
@@ -170,6 +237,7 @@ const StudentGrid: React.FC = () => {
           columns={columns}
           expandable={{ expandedRowRender }}
           dataSource={filteredStudents}
+          rowKey="admissionNumber"
           className='w-full shadow-lg ml-6 mr-0'
         />
       </div>
