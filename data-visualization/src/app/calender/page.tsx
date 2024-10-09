@@ -6,10 +6,7 @@ import type { Dayjs } from 'dayjs';
 
 const ReachableContext = createContext<string | null>(null);
 
-const wrapperStyle: React.CSSProperties = {
-  width: 400,
-  border:"3px solid black",
-};
+
 
 const getListData = (value: Dayjs) => {
   let listData: { type: string; content: string }[] = []; // Specify the type of listData
@@ -73,7 +70,7 @@ const Calender: React.FC = () => {
   const monthCellRender = (value: Dayjs) => {
     const num = getMonthData(value);
     return num ? (
-      <div className="notes-month">
+      <div className="notes-month ">
         <section>{num}</section>
         <span>Backlog number</span>
       </div>
@@ -116,8 +113,11 @@ const Calender: React.FC = () => {
   };
 
   return (
-    <div className='w-1/2 h-28 border-2'>
+    <div className='w-full space-y-4 py-6'>
+            <h1 className='w-full text-center text-xl font-semibold'>calender</h1>
+      <div>
       <Calendar cellRender={cellRender} />
+    </div>
       <Modal
         title="Event Details"
         visible={modalVisible}

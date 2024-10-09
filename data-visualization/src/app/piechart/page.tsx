@@ -10,10 +10,11 @@ const AttendancePieChart = () => {
 
   // Custom colors for different sections of the pie chart
   const COLORS = ['#00C49F', '#FF8042', '#FFBB28'];
-
   return (
-    <div className="flex justify-center items-center ">
-      <PieChart width={400} height={250}>
+    <div className="flex justify-center items-center flex-col pt-6  px-4 space-y-4">
+      <h1 className='w-full text-center text-xl font-semibold'>Professors Attendence</h1>
+      <div>
+      <PieChart width={450} height={250}>
         <Pie
           data={data}
           cx={200} // x coordinate of center of pie chart
@@ -32,6 +33,7 @@ const AttendancePieChart = () => {
         <Tooltip />
         <Legend />
       </PieChart>
+      </div>
     </div>
   );
 };
