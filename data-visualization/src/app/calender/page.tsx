@@ -1,13 +1,12 @@
-'use client'
 import React, { createContext, useState } from 'react';
-import type { BadgeProps, CalendarProps } from 'antd';
 import { Badge, Calendar, Button, Modal } from 'antd';
+import type { BadgeProps, CalendarProps } from 'antd';
 import type { Dayjs } from 'dayjs';
 
 const ReachableContext = createContext<string | null>(null);
 
 const getListData = (value: Dayjs) => {
-  let listData: { type: string; content: string }[] = []; // Specify the type of listData
+  let listData: { type: string; content: string }[] = [];
   switch (value.date()) {
     case 1:
       listData = [
@@ -29,26 +28,6 @@ const getListData = (value: Dayjs) => {
         { type: 'error', content: 'This is error event ' },
       ];
       break;
-    case 6:
-      listData = [
-        { type: 'warning', content: 'This is warning event.' },
-        { type: 'success', content: 'This is usual event.' },
-      ];
-      break;
-    case 11:
-      listData = [
-        { type: 'warning', content: 'This is warning event.' },
-        { type: 'success', content: 'This is usual event.' },
-        { type: 'error', content: 'This is error event.' },
-      ];
-      break;
-    case 23:
-      listData = [
-        { type: 'warning', content: 'This is warning event' },
-        { type: 'success', content: 'This is very long usual event' },
-        { type: 'error', content: 'This is error event ' },
-      ];
-      break;
     default:
   }
   return listData || [];
@@ -62,8 +41,9 @@ const getMonthData = (value: Dayjs) => {
 };
 
 const Calender: React.FC = () => {
+  // Initialize modalContent as an array of objects
   const [modalVisible, setModalVisible] = useState(false);
-  const [modalContent, setModalContent] = useState<string>("");
+  const [modalContent, setModalContent] = useState<{ type: string; content: string }[]>([]);
 
   const monthCellRender = (value: Dayjs) => {
     const num = getMonthData(value);
@@ -79,7 +59,7 @@ const Calender: React.FC = () => {
     const listData = getListData(value);
     if (listData.length) {
       return (
-        <ReachableContext.Provider value={modalContent}>
+        <ReachableContext.Provider value={modalContent.map(item => item.content).join(', ')}>
           <Button
             onClick={() => handleDateClick(listData)}
             className="border-none bg-transparent w-full h-full "
@@ -100,7 +80,7 @@ const Calender: React.FC = () => {
   };
 
   const handleDateClick = (listData: { type: string; content: string }[]) => {
-    setModalContent(listData); // Set the list data directly
+    setModalContent(listData); // Set the listData array in modalContent
     setModalVisible(true);
   };
 
@@ -111,14 +91,14 @@ const Calender: React.FC = () => {
   };
 
   return (
-    <div className='w-1/2 h-28 border-2'>
-      <Calendar cellRender={cellRender} />
+    <div style={{ width: '600px', height: '400px', overflow: 'hidden' }}>
+      <Calendar cellRender={cellRender} style={{ width: '100%', height: '100%' }} />
       <Modal
         title="Event Details"
         visible={modalVisible}
-        onOk={() => setModalVisible(false)}  // Closes the modal when "OK" is clicked
-        onCancel={() => setModalVisible(false)} // Optional, ensures modal closes on clicking outside
-        centered // This prop ensures the modal is vertically centered
+        onOk={() => setModalVisible(false)}
+        onCancel={() => setModalVisible(false)}
+        centered
         footer={[
           <Button key="ok" type="primary" onClick={() => setModalVisible(false)}>
             OK
@@ -126,25 +106,22 @@ const Calender: React.FC = () => {
         ]}
       >
         <ul style={{ paddingLeft: 0 }}>
-          {modalContent &&
-            modalContent.map((item, index) => (
-              <li key={index} style={{ listStyleType: "none", marginBottom: '8px' }}>
-                <Badge
-                  status={
-                    item.type === 'warning'
-                      ? 'warning'
-                      : item.type === 'error'
-                        ? 'error'
-                        : 'success'
-                  }
-                  text={item.content}
-                />
-              </li>
-            ))}
+          {modalContent.map((item, index) => (
+            <li key={index} style={{ listStyleType: "none", marginBottom: '8px' }}>
+              <Badge
+                status={
+                  item.type === 'warning'
+                    ? 'warning'
+                    : item.type === 'error'
+                    ? 'error'
+                    : 'success'
+                }
+                text={item.content}
+              />
+            </li>
+          ))}
         </ul>
       </Modal>
-
-
     </div>
   );
 };
