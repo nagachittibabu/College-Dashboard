@@ -4,7 +4,9 @@
         "count":8320,
         "imgpath":"/images/students.png",
         "percent":"12",
-        "description":" Increase"
+        "description":" Increase",
+        "pagenav":"/StudentGrid"
+
     },
     {
         "name":"Total Professors",

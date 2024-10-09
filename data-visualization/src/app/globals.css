@@ -111,48 +111,9 @@ body {
 .fontstyle {
   font-family: 'Poppins' !important;
 }
-
-.bgcolor{
-  background:#00000009 ;
+.transition-width {
+  transition: width 0.3s ease;
 }
-
-@media screen and (max-width: 1200px) {
-  body{
-    display: grid;
-    place-items: center;
-    margin-left: 30px;
-
-  }
-  .titlecard {width: 50%; height: 200px; }
-  .titlecontent{display: flex; justify-content: space-between; align-items: center;}
-  .titlecarddiv{width: 100%; display: flex; justify-content: center; place-items: center;}
-  .attendence{width: 100%; }
-  .chartswidth{width: 50%;}
-  .chartswidth{width: 50%;}
-  .resource{display: flex; flex-direction: column;}
-  .eventsarea{width: 100%;  display: flex;}
-  .main-div{display: grid; place-items: center;}
-  .calender{width: 100%;}
-  .header{width: 100%; display: flex; align-items: center; justify-content: center;padding-left: 0;}
-}
-@media screen and (max-width: 900px) {
-  body{
-    display: flex;
-  }
-  .titlecard {width:100%; height: 200px; }
-  .charts{width: 100%; flex-direction: column;}
-  .chartswidth{width:100%;}
-  .attendence{width: 100%;}
-  .header{width: 100%;padding-left: 0; gap: 60px;}
-  .search{display: none;}
-}
-@media screen and (max-width: 510px) {
-  body{
-    display: flex;
-  }
-  .titlecard{width: 100%; display: block; height: 150px;}
-  .chartswidth{width: 90%;}
-  .attendence{width: 100%; }
-  .charts{width: 100%;}
-
+.menu-title {
+  display: none;
 }
