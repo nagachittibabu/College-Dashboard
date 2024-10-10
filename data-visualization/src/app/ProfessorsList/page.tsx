@@ -21,7 +21,9 @@ const ProfessorsList = () => {
             <Sidenav />
         </div>
         <div className='flex pt-24 pl-40 text-xl'>
-            <a href="/">Home </a>
+            <a href="/" className='px-3'>Home </a>
+            <p> {'>'} </p>
+            <a href="/ProfessorsList/" className='px-3 text-red-500'>Professors List</a>
         </div>
         <div className="content-area flex flex-wrap justify-center gap-12 pt-10">
             {ProfessorsData.map((item) => {
